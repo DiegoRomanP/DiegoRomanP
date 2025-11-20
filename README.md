@@ -54,7 +54,7 @@ Soy Diego un estudiante de Ciencia de la Computación con enfoque en Ingeniería
 
 ---
 
-## Tecnologías (lista rápida)
+## Tecnologías
 
 **C++ · Python · Java · Linux · PyTorch · TensorFlow · Anaconda · pandas · NumPy · matplotlib · seaborn · scikit-learn**
 
