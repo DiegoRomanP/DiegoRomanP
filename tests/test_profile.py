@@ -3,6 +3,7 @@ from pathlib import Path
 import re
 import subprocess
 import unittest
+from xml.etree import ElementTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,6 +53,12 @@ BADGE_PATHS = (
     "docs/assets/badges/react.svg",
     "docs/assets/badges/typescript.svg",
 )
+BADGE_DIMENSIONS = {
+    "docs/assets/badges/python.svg": ("112", "36", "0 0 112 36"),
+    "docs/assets/badges/fastapi.svg": ("112", "36", "0 0 112 36"),
+    "docs/assets/badges/react.svg": ("112", "36", "0 0 112 36"),
+    "docs/assets/badges/typescript.svg": ("132", "36", "0 0 132 36"),
+}
 
 
 class PageAudit(HTMLParser):
@@ -224,6 +231,14 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("@media (prefers-reduced-motion: reduce)", self.css)
         self.assertIn(":focus-visible", self.css)
         self.assertIn('class="skip-link"', self.html)
+
+    def test_badge_intrinsic_size_matches_profile_rendering(self):
+        for relative_path, (width, height, view_box) in BADGE_DIMENSIONS.items():
+            with self.subTest(badge=relative_path):
+                root = ElementTree.parse(ROOT / relative_path).getroot()
+                self.assertEqual(root.attrib.get("width"), width)
+                self.assertEqual(root.attrib.get("height"), height)
+                self.assertEqual(root.attrib.get("viewBox"), view_box)
 
     def test_private_source_is_ignored_but_site_assets_remain_trackable(self):
         ignore_file = ROOT / ".gitignore"
