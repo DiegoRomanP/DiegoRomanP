@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Proyectos y formación de Diego Román en Ciencia de la Computación e Ingeniería de IA.">
+    <title>Diego Román — Ingeniería de IA</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Diego Román, inicio">
+          <span class="brand-mark" aria-hidden="true">DR</span>
+          <span>Diego Román <span class="brand-subtitle">Bitácora de laboratorio</span></span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul class="nav-links">
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="https://github.com/DiegoRomanP">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="container">
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Bitácora de laboratorio <span aria-hidden="true">/</span> Ciencia de la Computación</p>
+          <h1 id="hero-title">Hola, soy Diego Román</h1>
+          <p class="hero-intro">Estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería (UNI) desde 2022. Me enfoco en construir aplicaciones full stack con IA aplicada: en mis proyectos combino interfaces, APIs y datos con flujos RAG y modelos predictivos, procurando que las respuestas puedan revisarse.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#proyectos">Ver proyectos</a>
+            <a class="button button-secondary" href="https://github.com/DiegoRomanP?tab=repositories">Explorar repositorios</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/profile-banner.svg" alt="Ilustración abstracta de rutas de datos que conectan nodos de un laboratorio digital" width="1200" height="420">
+        </div>
+      </section>
+
+      <section id="proyectos" class="section projects-section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selección de repositorios</p>
+          <h2 id="projects-title">Proyectos destacados</h2>
+          <p>Prototipos y herramientas para explorar cómo los datos y los modelos pueden convertirse en experiencias revisables.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-meta"><span class="project-index">01</span><span>RAG · investigación documental</span></div>
+            <h3><a href="https://github.com/DiegoRomanP/lexitrace-legal-evidence-rag">LexiTrace — evidencia documental con RAG</a></h3>
+            <p>MVP local para investigar PDFs seleccionados y consultar respuestas con citas al documento, página y fragmento. No ofrece asesoría legal.</p>
+            <ul class="chips" aria-label="Tecnologías de LexiTrace">
+              <li>FastAPI</li><li>React</li><li>TypeScript</li><li>SQLite</li><li>Qdrant</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta"><span class="project-index">02</span><span>Aprendizaje · estudio</span></div>
+            <h3><a href="https://github.com/DiegoRomanP/StudyAI">StudyAI</a></h3>
+            <p>Crea planes de estudio a partir de documentos y metas, con sesiones, materiales, cuestionarios y repaso espaciado SM-2. El LLM simulado está activo por defecto; el RAG semántico es opcional.</p>
+            <ul class="chips" aria-label="Tecnologías de StudyAI">
+              <li>FastAPI</li><li>React</li><li>TypeScript</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta"><span class="project-index">03</span><span>Plugin · notas</span></div>
+            <h3><a href="https://github.com/DiegoRomanP/context-ia-obsidian">Context IA Obsidian</a></h3>
+            <p>Plugin con acciones de IA para resumir o explicar notas, investigar con fuentes y generar imágenes.</p>
+            <p class="release-link"><a href="https://github.com/DiegoRomanP/context-ia-obsidian/releases/tag/v0.1.0">Ver release v0.1.0 <span aria-hidden="true">↗</span></a></p>
+            <ul class="chips" aria-label="Tecnologías de Context IA Obsidian">
+              <li>TypeScript</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta"><span class="project-index">04</span><span>ML · predicción crediticia</span></div>
+            <h3><a href="https://github.com/DiegoRomanP/Give-me-some-Credit">Give me some Credit</a></h3>
+            <p>Experimento de predicción crediticia con XGBoost que compara métodos de balanceo.</p>
+            <ul class="chips" aria-label="Tecnologías de Give me some Credit">
+              <li>FastAPI</li><li>Streamlit</li><li>Docker</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="formacion" class="section formation-section" aria-labelledby="formation-title">
+        <div class="section-heading">
+          <p class="eyebrow">Formación</p>
+          <h2 id="formation-title">Formación</h2>
+          <p>Estudios académicos, aprendizaje complementario e idiomas.</p>
+        </div>
+
+        <div class="formation-grid">
+          <article class="formation-card">
+            <h3>Formación académica</h3>
+            <p><strong>Ciencia de la Computación — Universidad Nacional de Ingeniería (UNI)</strong></p>
+            <p class="formation-meta">Estudiante de pregrado · 2022–presente</p>
+            <h4>Cursos</h4>
+            <ul class="course-list">
+              <li>Estructuras de Datos</li>
+              <li>Base de Datos</li>
+              <li>Ingeniería de Software</li>
+              <li>Sistemas Operativos</li>
+            </ul>
+          </article>
+
+          <article class="formation-card">
+            <h3>Formación complementaria</h3>
+            <ul class="credential-list">
+              <li><strong>Diplomado en Ciencia de Datos Avanzada</strong><span>Data Mining Consulting · 2025</span></li>
+              <li><strong>AI Foundations Associate</strong><span>Oracle University · 2025</span></li>
+              <li><strong>Claude Code in Action (2026)</strong><span>Anthropic</span></li>
+              <li><strong>Claude Code 101</strong><span>Anthropic</span></li>
+            </ul>
+          </article>
+        </div>
+        <p class="language-note"><strong>Idiomas:</strong> Español nativo · inglés avanzado (C1), formación en ICPNA.</p>
+      </section>
+
+      <section id="tecnologias" class="section technologies-section" aria-labelledby="technologies-title">
+        <div class="section-heading">
+          <p class="eyebrow">Herramientas en mis proyectos</p>
+          <h2 id="technologies-title">Tecnologías</h2>
+          <p>Un conjunto breve de tecnologías presentes en los repositorios destacados.</p>
+        </div>
+        <ul class="technology-list" aria-label="Tecnologías destacadas">
+          <li><img src="assets/badges/python.svg" alt="Python" width="112" height="36"></li>
+          <li><img src="assets/badges/fastapi.svg" alt="FastAPI" width="112" height="36"></li>
+          <li><img src="assets/badges/react.svg" alt="React" width="112" height="36"></li>
+          <li><img src="assets/badges/typescript.svg" alt="TypeScript" width="132" height="36"></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Explora el código y más proyectos en mis repositorios públicos.</p>
+        <nav class="footer-links" aria-label="Enlaces profesionales">
+          <a class="footer-link" href="https://www.linkedin.com/in/diego-osvaldo-roman-palomino/">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/DiegoRomanP">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

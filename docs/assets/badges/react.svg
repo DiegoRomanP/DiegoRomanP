@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 36" role="img" aria-labelledby="title">
+  <title id="title">React</title>
+  <rect x=".5" y=".5" width="111" height="35" rx="17.5" fill="#F0EDFF" stroke="#D5CEF8" />
+  <circle cx="19" cy="18" r="5" fill="#7357E8" />
+  <text x="32" y="23" fill="#102033" font-family="system-ui, sans-serif" font-size="14" font-weight="650">React</text>
+</svg>
