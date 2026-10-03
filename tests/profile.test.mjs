@@ -4,6 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { validateProfileData } from "../scripts/check-profile-data.mjs";
+import { validateReadmeMarkdown } from "../scripts/markdown-safety.mjs";
 import { renderReadme } from "../scripts/render-readme.mjs";
 import { renderLanguageChart, validateSnapshot } from "../scripts/github-stats.mjs";
 
@@ -74,7 +75,6 @@ test("the generated README is GFM, Spanish, synchronized and uses local accessib
   assert.match(readme, /Claude Code 101/);
   assert.match(readme, /formación en ICPNA/);
   assert.doesNotMatch(readme, /<\s*\/?\s*[A-Za-z][^>]*>/);
-  assert.doesNotMatch(readme, /javascript:|<\s*(?:script|style|iframe)\b/i);
   assert.doesNotMatch(readme, /github-readme-stats|komarev|visitor.?count|contribution.?graph/i);
   assert.doesNotMatch(readme, /main_fullstack_ia|GITHUB_TOKEN|Bearer\s/i);
 
@@ -90,6 +90,47 @@ test("the generated README is GFM, Spanish, synchronized and uses local accessib
     assert.ok(alt.trim());
     assert.ok(!/^https?:\/\//i.test(relativePath));
     await assert.doesNotReject(readFile(path.join(ROOT, relativePath)));
+  }
+});
+
+test("GFM URL checks inspect destinations, not ordinary JavaScript language text", () => {
+  assert.equal(validateReadmeMarkdown("JavaScript: 1"), "JavaScript: 1");
+  assert.equal(
+    validateReadmeMarkdown("[Perfil](https://github.com/DiegoRomanP) · ![Marca](public/assets/favicon.svg)"),
+    "[Perfil](https://github.com/DiegoRomanP) · ![Marca](public/assets/favicon.svg)",
+  );
+  assert.equal(
+    validateReadmeMarkdown("[Perfil][github]\n\n[github]: https://github.com/DiegoRomanP"),
+    "[Perfil][github]\n\n[github]: https://github.com/DiegoRomanP",
+  );
+  assert.equal(
+    validateReadmeMarkdown("[Perfil](<https://github.com/DiegoRomanP>)"),
+    "[Perfil](<https://github.com/DiegoRomanP>)",
+  );
+
+  const unsafeDestinations = [
+    "[x](javascript:alert(1))",
+    "![x](javascript:alert(1))",
+    "[x](<JaVaScRiPt:alert(1)>)",
+    "[x](java\nscript:alert(1))",
+    "[x](java\\:script:alert(1))",
+    "![x](javascript&#58;alert(1))",
+    "[x](javascript%3Aalert(1))",
+    "[x][bad]\n\n[bad]: javascript:alert(1)",
+    "![x](public/assets/../private.svg)",
+  ];
+  for (const markdown of unsafeDestinations) {
+    assert.throws(() => validateReadmeMarkdown(markdown), undefined, markdown);
+  }
+
+  for (const rawHtml of [
+    '<a href="javascript:alert(1)">x</a>',
+    '<img src="javascript:alert(1)">',
+    "<script>alert(1)</script>",
+    "<style>body{display:none}</style>",
+    '<iframe src="https://example.com"></iframe>',
+  ]) {
+    assert.throws(() => validateReadmeMarkdown(rawHtml), /HTML/);
   }
 });
 
@@ -181,4 +222,31 @@ test("Pages and weekly stats automation use scoped permissions and pinned action
   assert.ok(actionRefs.length >= 4);
   assert.ok(actionRefs.every(([, sha]) => sha.length === 40));
   assert.doesNotMatch(workflow, /\b(?:PERSONAL_ACCESS_TOKEN|PAT|GH_TOKEN)\b/);
+
+  const prepareStart = workflow.indexOf("\n  prepare:");
+  const deployStart = workflow.indexOf("\n  build-and-deploy:");
+  assert.ok(prepareStart >= 0 && deployStart > prepareStart);
+  const prepare = workflow.slice(prepareStart, deployStart);
+  const collectStart = prepare.indexOf("- name: Collect public GitHub statistics");
+  const validateStart = prepare.indexOf("- name: Validate refreshed profile before bot commit");
+  const commitStart = prepare.indexOf("- name: Commit only generated profile data when it changed");
+  assert.ok(collectStart >= 0 && validateStart > collectStart && commitStart > validateStart);
+
+  const collectStep = prepare.slice(collectStart, validateStart);
+  const validationStep = prepare.slice(validateStart, commitStart);
+  const validationCondition = /if: github\.event_name == 'schedule' \|\| github\.event_name == 'workflow_dispatch'/;
+  assert.match(collectStep, validationCondition);
+  assert.match(validationStep, validationCondition);
+  const precommitCommands = ["npm run check", "npm run build", "npm test", "npm run check:budget"];
+  const commandIndexes = precommitCommands.map((command) => validationStep.indexOf(command));
+  assert.ok(commandIndexes.every((index) => index >= 0));
+  assert.deepEqual(commandIndexes, [...commandIndexes].sort((first, second) => first - second));
+  assert.doesNotMatch(validationStep, /PUBLIC_BUILD_REVISION|upload-pages-artifact/);
+
+  const deploy = workflow.slice(deployStart);
+  const deployCommands = ["run: npm run check", "run: npm run build", "run: npm test", "run: npm run check:budget"];
+  const deployIndexes = deployCommands.map((command) => deploy.indexOf(command));
+  assert.ok(deployIndexes.every((index) => index >= 0));
+  assert.deepEqual(deployIndexes, [...deployIndexes].sort((first, second) => first - second));
+  assert.match(deploy, /PUBLIC_BUILD_REVISION: \$\{\{ needs\.prepare\.outputs\.revision \}\}/);
 });

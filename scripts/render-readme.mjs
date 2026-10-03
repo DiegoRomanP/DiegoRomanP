@@ -8,6 +8,7 @@ import {
   validateSnapshot,
 } from "./github-stats.mjs";
 import { validateProfileData } from "./check-profile-data.mjs";
+import { validateReadmeMarkdown } from "./markdown-safety.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -94,7 +95,7 @@ export function renderReadme(profileSource, statsSource) {
     "![Conteo de lenguajes principales por repositorio público propio](public/assets/github-languages.svg)",
   ].join("\n\n");
 
-  return [
+  const markdown = [
     `# Hola, soy ${profile.name} 👋`,
     "",
     profile.intro,
@@ -142,6 +143,8 @@ export function renderReadme(profileSource, statsSource) {
     `[GitHub](${profile.links.github}) · [LinkedIn](${profile.links.linkedin}) · [Portafolio web](${profile.links.portfolio})`,
     "",
   ].join("\n");
+
+  return validateReadmeMarkdown(markdown);
 }
 
 async function readSources(root = ROOT) {

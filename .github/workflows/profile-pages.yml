@@ -44,6 +44,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Validate refreshed profile before bot commit
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          npm run check
+          npm run build
+          npm test
+          npm run check:budget
+
       - name: Commit only generated profile data when it changed
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |

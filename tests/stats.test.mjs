@@ -12,6 +12,7 @@ import {
   validateSnapshot,
 } from "../scripts/github-stats.mjs";
 import { updateProfileArtifacts } from "../scripts/update-github-stats.mjs";
+import { renderReadme } from "../scripts/render-readme.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const USERNAME = "DiegoRomanP";
@@ -225,6 +226,16 @@ test("validates snapshots and escapes language labels before rendering SVG", () 
     () => validateSnapshot({ ...snapshot, metrics: { ...snapshot.metrics, stars: 8 } }),
     /no corresponden/,
   );
+});
+
+test("README generation accepts JavaScript as a repository language and emits its count", async () => {
+  const profile = JSON.parse(await readFile(path.join(ROOT, "data/profile.json"), "utf8"));
+  const snapshot = minimalSnapshot([
+    { name: "language-label-fixture", language: "JavaScript", stars: 0 },
+  ]);
+
+  const readme = renderReadme(profile, snapshot);
+  assert.match(readme, /\*\*Conteos por repositorio:\*\* JavaScript: 1\./);
 });
 
 test("API failure leaves the last generated snapshot, SVG and README unchanged", async () => {

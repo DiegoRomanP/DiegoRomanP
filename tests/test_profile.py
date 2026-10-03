@@ -1,9 +1,11 @@
 from html.parser import HTMLParser
+from html import unescape
 import json
 from pathlib import Path
 import re
 import subprocess
 import unittest
+from urllib.parse import unquote, urlsplit
 from xml.etree import ElementTree
 
 
@@ -17,6 +19,17 @@ SCRIPT_PATH = ROOT / "src" / "scripts" / "site.ts"
 DIST_PATH = ROOT / "dist"
 BASE_PATH = "/DiegoRomanP/"
 PROJECT_IDS = ("lexitrace", "studyai", "contextia", "give-me-some-credit")
+HTML_URI_ATTRIBUTES = {"href", "src", "srcset", "action", "formaction", "poster", "xlink:href"}
+
+
+def normalize_uri_for_scheme_check(value):
+    candidate = unescape(value.strip())
+    for _ in range(3):
+        decoded = unquote(candidate)
+        if decoded == candidate:
+            break
+        candidate = decoded
+    return "".join(character for character in candidate if not character.isspace() and ord(character) >= 0x20)
 
 
 class PageAudit(HTMLParser):
@@ -29,6 +42,7 @@ class PageAudit(HTMLParser):
         self.fragments = []
         self.links = []
         self.icon_paths = []
+        self.url_attributes = []
         self.repository_links = []
         self.resource_paths = []
         self.image_alts = []
@@ -41,6 +55,11 @@ class PageAudit(HTMLParser):
         attrs = dict(attrs)
         self.tags.append(tag)
         self.attributes.extend(attrs)
+        self.url_attributes.extend(
+            (tag, name, value)
+            for name, value in attrs.items()
+            if name.lower() in HTML_URI_ATTRIBUTES
+        )
         if "id" in attrs:
             self.ids.add(attrs["id"])
         if tag == "a" and "href" in attrs:
@@ -138,10 +157,8 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("no representa bytes de código ni nivel de dominio", self.readme.lower())
         for language in self.stats["metrics"]["languages"]:
             self.assertIn(f"{language['name']}: {language['count']}", self.readme)
-        self.assertFalse(
-            re.search(r"(?i)<\s*/?\s*(?:style|script|iframe)\b|javascript:", self.readme)
-        )
-        self.assertNotRegex(self.readme, r"<\s*/?\s*[A-Za-z][^>]*>")
+        self.assertFalse(re.search(r"(?i)<\s*/?\s*(?:style|script|iframe)\b", self.readme))
+        self.assertNotRegex(self.readme, r"<\s*/?\s*[A-Za-z][A-Za-z0-9-]*(?=\s|/?>)[^>]*>")
         self.assertFalse(
             re.search(r"(?i)\b(?:placeholder|TODO|FIXME|your name|main_fullstack_ia|GITHUB_TOKEN)\b", self.readme)
         )
@@ -223,7 +240,19 @@ class ProfileReadmeTests(unittest.TestCase):
 
         self.assertTrue(all(alt.strip() for alt in self.page.image_alts))
         self.assertFalse(any(attribute.lower().startswith("on") for attribute in self.page.attributes))
-        self.assertNotRegex(self.html, r"(?i)javascript:|google-analytics|googletagmanager|plausible\.io|hotjar")
+        self.assertNotRegex(self.html, r"(?i)google-analytics|googletagmanager|plausible\.io|hotjar")
+        for tag, attribute, raw_value in self.page.url_attributes:
+            values = raw_value.split(",") if attribute == "srcset" else [raw_value]
+            for value in values:
+                uri = value.strip().split()[0]
+                normalized = normalize_uri_for_scheme_check(uri)
+                with self.subTest(tag=tag, attribute=attribute, value=uri):
+                    self.assertFalse(normalized.lower().startswith("javascript:"))
+                    parsed = urlsplit(normalized)
+                    if parsed.scheme:
+                        self.assertEqual(parsed.scheme.lower(), "https")
+                    else:
+                        self.assertTrue(uri.startswith(BASE_PATH) or uri.startswith("#"))
         self.assertIn("github-languages.svg", self.html)
         self.assertIn("lexitrace-flow.svg", self.html)
         self.assertIn("lexitrace-flow-mobile.svg", self.html)
