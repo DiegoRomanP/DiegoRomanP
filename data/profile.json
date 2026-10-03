@@ -1,0 +1,129 @@
+{
+  "name": "Diego Román",
+  "username": "DiegoRomanP",
+  "headline": "Estudiante de Ciencia de la Computación · UNI",
+  "intro": "Estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería (UNI) desde 2022. En mis proyectos exploro aplicaciones full stack con IA aplicada: investigación documental con citas, planificación de estudio, herramientas de IA para notas y experimentos de machine learning. Cuando una respuesta se apoya en documentos, me importa que sus fuentes se puedan revisar.",
+  "links": {
+    "github": "https://github.com/DiegoRomanP",
+    "repositories": "https://github.com/DiegoRomanP?tab=repositories",
+    "linkedin": "https://www.linkedin.com/in/diego-osvaldo-roman-palomino/",
+    "portfolio": "https://diegoromanp.github.io/DiegoRomanP/"
+  },
+  "projects": [
+    {
+      "id": "lexitrace",
+      "number": "01",
+      "name": "LexiTrace",
+      "descriptor": "Evidencia documental con RAG",
+      "category": "Investigación documental",
+      "url": "https://github.com/DiegoRomanP/lexitrace-legal-evidence-rag",
+      "summary": "MVP local para investigar PDFs seleccionados y consultar respuestas con citas al documento, página y fragmento. No ofrece asesoría legal.",
+      "purpose": "Explorar cómo las respuestas sobre documentos pueden dejar visibles sus fuentes.",
+      "scope": "PDFs seleccionados · citas a documento, página y fragmento · no es asesoría legal.",
+      "stack": ["FastAPI", "React", "TypeScript", "SQLite", "Qdrant"]
+    },
+    {
+      "id": "studyai",
+      "number": "02",
+      "name": "StudyAI",
+      "descriptor": "Planificación y repaso de estudio",
+      "category": "Aprendizaje · estudio",
+      "url": "https://github.com/DiegoRomanP/StudyAI",
+      "summary": "Organiza planes desde documentos y metas en sesiones, materiales y cuestionarios, con repaso espaciado SM-2. El LLM simulado se usa por defecto; el RAG semántico es opcional.",
+      "purpose": "Convertir objetivos y material de estudio en una planificación por sesiones.",
+      "scope": "Documentos y metas · materiales y cuestionarios · repaso SM-2 · LLM simulado por defecto, RAG opcional.",
+      "stack": ["FastAPI", "React", "TypeScript"]
+    },
+    {
+      "id": "contextia",
+      "number": "03",
+      "name": "Context IA Obsidian",
+      "descriptor": "Acciones de IA para notas",
+      "category": "Plugin · notas",
+      "url": "https://github.com/DiegoRomanP/context-ia-obsidian",
+      "summary": "Plugin TypeScript para resumir o explicar notas, investigar con fuentes y generar imágenes.",
+      "purpose": "Explorar acciones de IA integradas al flujo de notas en Obsidian.",
+      "scope": "Resumir y explicar notas · investigar con fuentes · generar imágenes.",
+      "stack": ["TypeScript"],
+      "release": {
+        "label": "Release v0.1.0",
+        "url": "https://github.com/DiegoRomanP/context-ia-obsidian/releases/tag/v0.1.0"
+      }
+    },
+    {
+      "id": "give-me-some-credit",
+      "number": "04",
+      "name": "Give me some Credit",
+      "descriptor": "Experimento de predicción crediticia",
+      "category": "Machine learning · clasificación",
+      "url": "https://github.com/DiegoRomanP/Give-me-some-Credit",
+      "summary": "Experimento de predicción crediticia con XGBoost que compara métodos de balanceo.",
+      "purpose": "Explorar el efecto de distintas estrategias de balanceo en un experimento de clasificación crediticia.",
+      "scope": "XGBoost · comparación de métodos de balanceo · API FastAPI e interfaz Streamlit.",
+      "stack": ["XGBoost", "FastAPI", "Streamlit", "Docker"]
+    }
+  ],
+  "technologyGroups": [
+    {
+      "label": "APIs y backend",
+      "technologies": ["Python", "FastAPI"]
+    },
+    {
+      "label": "Interfaces",
+      "technologies": ["React", "TypeScript", "Streamlit"]
+    },
+    {
+      "label": "Datos e IA aplicada",
+      "technologies": ["RAG", "SQLite", "Qdrant", "XGBoost"]
+    },
+    {
+      "label": "Herramientas e integración",
+      "technologies": ["Obsidian", "Docker"]
+    }
+  ],
+  "education": {
+    "degree": "Ciencia de la Computación",
+    "institution": "Universidad Nacional de Ingeniería (UNI)",
+    "status": "Estudiante de pregrado",
+    "period": "2022–presente",
+    "courses": [
+      "Estructuras de Datos",
+      "Base de Datos",
+      "Ingeniería de Software",
+      "Sistemas Operativos"
+    ],
+    "complementary": [
+      {
+        "name": "Diplomado en Ciencia de Datos Avanzada",
+        "institution": "Data Mining Consulting",
+        "period": "2025"
+      },
+      {
+        "name": "AI Foundations Associate",
+        "institution": "Oracle University",
+        "period": "2025"
+      },
+      {
+        "name": "Claude Code in Action",
+        "institution": "Anthropic",
+        "period": "2026"
+      },
+      {
+        "name": "Claude Code 101",
+        "institution": "Anthropic",
+        "period": ""
+      }
+    ],
+    "languages": [
+      {
+        "name": "Español",
+        "level": "nativo"
+      },
+      {
+        "name": "Inglés",
+        "level": "avanzado (C1)",
+        "note": "formación en ICPNA"
+      }
+    ]
+  }
+}

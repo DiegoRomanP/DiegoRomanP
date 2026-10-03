@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="270" viewBox="0 0 320 270" role="img" aria-labelledby="title description">
+  <title id="title">Lenguaje principal declarado por repositorio</title>
+  <desc id="description">Distribución entre 22 repositorios con lenguaje principal informado; cada repositorio cuenta una vez.</desc>
+  <rect width="320" height="270" rx="14" fill="#faf9f6" />
+  <text x="16" y="27" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Lenguajes principales</text>
+  <text x="16" y="50" fill="#62625b" font-family="system-ui, sans-serif" font-size="14">1 repositorio = 1 dato · sin bytes ni nivel</text>
+  <text x="16" y="88" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Jupyter Notebook</text>
+  <text x="304" y="88" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">8</text>
+  <rect x="16" y="95" width="200" height="5" rx="2.5" fill="#e3e1da" />
+  <rect x="16" y="95" width="200.00" height="5" rx="2.5" fill="#14746d" />
+  <text x="16" y="122" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Python</text>
+  <text x="304" y="122" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">8</text>
+  <rect x="16" y="129" width="200" height="5" rx="2.5" fill="#e3e1da" />
+  <rect x="16" y="129" width="200.00" height="5" rx="2.5" fill="#14746d" />
+  <text x="16" y="156" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Shell</text>
+  <text x="304" y="156" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">2</text>
+  <rect x="16" y="163" width="200" height="5" rx="2.5" fill="#e3e1da" />
+  <rect x="16" y="163" width="50.00" height="5" rx="2.5" fill="#14746d" />
+  <text x="16" y="190" fill="#151515" font-family="system-ui, sans-serif" font-size="18">TypeScript</text>
+  <text x="304" y="190" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">2</text>
+  <rect x="16" y="197" width="200" height="5" rx="2.5" fill="#e3e1da" />
+  <rect x="16" y="197" width="50.00" height="5" rx="2.5" fill="#14746d" />
+  <text x="16" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Otros lenguajes</text>
+  <text x="304" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">2</text>
+  <rect x="16" y="231" width="200" height="5" rx="2.5" fill="#e3e1da" />
+  <rect x="16" y="231" width="50.00" height="5" rx="2.5" fill="#14746d" />
+  <text x="16" y="258" fill="#62625b" font-family="system-ui, sans-serif" font-size="13">n = 22 · excluye repos sin lenguaje informado</text>
+</svg>

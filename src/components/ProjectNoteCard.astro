@@ -1,0 +1,26 @@
+---
+import type { ProfileProject } from "../types";
+
+interface Props {
+  project: ProfileProject;
+  variant: "notes" | "machine-learning";
+}
+
+const { project, variant } = Astro.props;
+---
+
+<article class={`project-note project-note-${variant}`} id={project.id} data-reveal>
+  <div class="project-meta">
+    <span class="project-index">{project.number}</span>
+    <span>{project.category}</span>
+  </div>
+  <h3><a href={project.url}>{project.name}</a></h3>
+  <p>{project.summary}</p>
+  <p class="project-scope"><strong>Alcance</strong>{project.scope}</p>
+  <p class="stack-line"><span>Stack</span>{project.stack.join(" · ")}</p>
+  {project.release && (
+    <p class="release-link">
+      <a href={project.release.url}>{project.release.label}<span aria-hidden="true"> ↗</span></a>
+    </p>
+  )}
+</article>

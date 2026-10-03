@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-03T00:48:30.722Z",
+  "sources": {
+    "profile": "https://api.github.com/users/DiegoRomanP",
+    "repositories": "https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100"
+  },
+  "profile": {
+    "url": "https://github.com/DiegoRomanP",
+    "followers": 6
+  },
+  "repositories": [
+    {
+      "name": "251CC232A-20221624A_PC1",
+      "url": "https://github.com/DiegoRomanP/251CC232A-20221624A_PC1",
+      "stars": 0,
+      "language": "Java"
+    },
+    {
+      "name": "An-lisis-de-Fallecdos-de-COVID-en-Per-",
+      "url": "https://github.com/DiegoRomanP/An-lisis-de-Fallecdos-de-COVID-en-Per-",
+      "stars": 0,
+      "language": null
+    },
+    {
+      "name": "context-ia-obsidian",
+      "url": "https://github.com/DiegoRomanP/context-ia-obsidian",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "name": "Detection-Person-Metropolitano",
+      "url": "https://github.com/DiegoRomanP/Detection-Person-Metropolitano",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "DiegoRomanP",
+      "url": "https://github.com/DiegoRomanP/DiegoRomanP",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "Give-me-some-Credit",
+      "url": "https://github.com/DiegoRomanP/Give-me-some-Credit",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "Hair-Style-Look",
+      "url": "https://github.com/DiegoRomanP/Hair-Style-Look",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "Implement-of-FaceNet-in-recognition-faces",
+      "url": "https://github.com/DiegoRomanP/Implement-of-FaceNet-in-recognition-faces",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "lab-colaboracion-Roman-Palomino",
+      "url": "https://github.com/DiegoRomanP/lab-colaboracion-Roman-Palomino",
+      "stars": 0,
+      "language": "Shell"
+    },
+    {
+      "name": "legalhub-pe",
+      "url": "https://github.com/DiegoRomanP/legalhub-pe",
+      "stars": 0,
+      "language": "Shell"
+    },
+    {
+      "name": "lexitrace-legal-evidence-rag",
+      "url": "https://github.com/DiegoRomanP/lexitrace-legal-evidence-rag",
+      "stars": 1,
+      "language": "Python"
+    },
+    {
+      "name": "Mini-ERM-Fast-Food",
+      "url": "https://github.com/DiegoRomanP/Mini-ERM-Fast-Food",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "name": "MNIST-PROJECT",
+      "url": "https://github.com/DiegoRomanP/MNIST-PROJECT",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "Predicci-n-de-cancelaciones-en-alojamientos-tur-sticos",
+      "url": "https://github.com/DiegoRomanP/Predicci-n-de-cancelaciones-en-alojamientos-tur-sticos",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "Project-Dive-into-Deep-Learning",
+      "url": "https://github.com/DiegoRomanP/Project-Dive-into-Deep-Learning",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "ProyectoFinal_MLE",
+      "url": "https://github.com/DiegoRomanP/ProyectoFinal_MLE",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "Recognition-of-dogs-and-cats",
+      "url": "https://github.com/DiegoRomanP/Recognition-of-dogs-and-cats",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "Reconocimiento-de-Rostros",
+      "url": "https://github.com/DiegoRomanP/Reconocimiento-de-Rostros",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "RNN-Y-LSTM",
+      "url": "https://github.com/DiegoRomanP/RNN-Y-LSTM",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "Safe-a-Life",
+      "url": "https://github.com/DiegoRomanP/Safe-a-Life",
+      "stars": 0,
+      "language": "CSS"
+    },
+    {
+      "name": "Simple-docs-recognition",
+      "url": "https://github.com/DiegoRomanP/Simple-docs-recognition",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "StudyAI",
+      "url": "https://github.com/DiegoRomanP/StudyAI",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "Titanic-dataset-s-analysis",
+      "url": "https://github.com/DiegoRomanP/Titanic-dataset-s-analysis",
+      "stars": 0,
+      "language": "Jupyter Notebook"
+    }
+  ],
+  "metrics": {
+    "publicOwnedRepositories": 23,
+    "stars": 1,
+    "followers": 6,
+    "languages": [
+      {
+        "name": "Jupyter Notebook",
+        "count": 8
+      },
+      {
+        "name": "Python",
+        "count": 8
+      },
+      {
+        "name": "Shell",
+        "count": 2
+      },
+      {
+        "name": "TypeScript",
+        "count": 2
+      },
+      {
+        "name": "CSS",
+        "count": 1
+      },
+      {
+        "name": "Java",
+        "count": 1
+      }
+    ]
+  }
+}

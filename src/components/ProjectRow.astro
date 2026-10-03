@@ -1,0 +1,23 @@
+---
+import type { ProfileProject } from "../types";
+
+interface Props {
+  project: ProfileProject;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="project-row" id={project.id} data-reveal>
+  <p class="project-index project-row-index">{project.number}<span aria-hidden="true"> / 04</span></p>
+  <div class="project-row-main">
+    <p class="project-meta-label">{project.category}</p>
+    <h3><a href={project.url}>{project.name}<span class="title-dash"> — </span>{project.descriptor}</a></h3>
+    <p>{project.summary}</p>
+  </div>
+  <div class="project-row-notes">
+    <p><strong>Propósito</strong>{project.purpose}</p>
+    <p><strong>Alcance</strong>{project.scope}</p>
+    <p class="stack-line"><strong>Stack</strong>{project.stack.join(" · ")}</p>
+  </div>
+</article>

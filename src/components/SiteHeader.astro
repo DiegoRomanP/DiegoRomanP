@@ -1,0 +1,38 @@
+---
+import type { Profile } from "../types";
+
+interface Props {
+  profile: Profile;
+}
+
+const { profile } = Astro.props;
+---
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label={`${profile.name}, inicio`}>
+      <span class="brand-mark" aria-hidden="true">DR</span>
+      <span class="brand-copy">
+        <strong>{profile.name}</strong>
+        <span>Bitácora de proyectos</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#github-stats">GitHub</a></li>
+        <li><a href="#herramientas">Herramientas</a></li>
+        <li><a href="#formacion">Formación</a></li>
+      </ul>
+    </nav>
+    <div class="header-utilities">
+      <span class="edition-label">UNI · 2022—</span>
+      <div class="theme-switcher" data-theme-controls hidden role="group" aria-label="Tema de color">
+        <button type="button" data-theme-choice="system" aria-pressed="true">Sistema</button>
+        <button type="button" data-theme-choice="light" aria-pressed="false">Claro</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Oscuro</button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,25 @@
+---
+import type { Profile } from "../types";
+
+interface Props {
+  profile: Profile;
+  buildRevision: string;
+}
+
+const { profile, buildRevision } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-title">Seguimos la conversación.</p>
+      <p class="footer-note">Código, proyectos y formación en los enlaces públicos.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces profesionales">
+      <a href={profile.links.github}>GitHub <span aria-hidden="true">↗</span></a>
+      <a href={profile.links.linkedin}>LinkedIn <span aria-hidden="true">↗</span></a>
+      <a href={profile.links.repositories}>Repositorios <span aria-hidden="true">↗</span></a>
+    </nav>
+    <p class="build-revision">Build local/CI · revisión <code>{buildRevision}</code></p>
+  </div>
+</footer>

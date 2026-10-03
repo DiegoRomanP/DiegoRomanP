@@ -1,0 +1,67 @@
+---
+import type { StatsSnapshot } from "../types";
+
+interface Props {
+  stats: StatsSnapshot;
+  baseUrl: string;
+}
+
+const { stats, baseUrl } = Astro.props;
+const shownLanguages = stats.metrics.languages.slice(0, 4);
+const otherLanguages = stats.metrics.languages.slice(4).reduce((total, language) => total + language.count, 0);
+const chartRows = shownLanguages.length + (otherLanguages > 0 ? 1 : 0) || 1;
+const chartHeight = 100 + chartRows * 34;
+const languageRows = shownLanguages.map((language) => ({ name: language.name, count: language.count }));
+if (otherLanguages > 0) languageRows.push({ name: "Otros lenguajes", count: otherLanguages });
+if (languageRows.length === 0) languageRows.push({ name: "Sin datos de lenguaje", count: 0 });
+const number = new Intl.NumberFormat("es-PE", { maximumFractionDigits: 0 });
+const timestamp = `${stats.generatedAt.slice(0, 10)} ${stats.generatedAt.slice(11, 16)} UTC`;
+---
+
+<section id="github-stats" class="section stats-section" aria-labelledby="stats-title">
+  <div class="section-intro" data-reveal>
+    <p class="eyebrow">Trazas públicas / GitHub</p>
+    <h2 id="stats-title">Cifras con fuente y definición.</h2>
+    <p>Una lectura acotada de lo que GitHub muestra públicamente; no mide actividad privada, commits de por vida ni experiencia.</p>
+  </div>
+  <div class="stats-layout" data-reveal>
+    <dl class="stats-numbers">
+      <div class="stat-item">
+        <dt>Repositorios propios públicos <span>(sin forks)</span></dt>
+        <dd>{number.format(stats.metrics.publicOwnedRepositories)}</dd>
+      </div>
+      <div class="stat-item">
+        <dt>Estrellas en esos repositorios</dt>
+        <dd>{number.format(stats.metrics.stars)}</dd>
+      </div>
+      <div class="stat-item">
+        <dt>Seguidores de la cuenta</dt>
+        <dd>{number.format(stats.metrics.followers)}</dd>
+      </div>
+    </dl>
+    <div class="language-stat">
+      <img
+        src={`${baseUrl}assets/github-languages.svg`}
+        alt="Gráfico de barras con el conteo de lenguajes principales declarados por repositorio público propio"
+        width="320"
+        height={chartHeight}
+        loading="lazy"
+        decoding="async"
+      />
+      <ul class="language-counts" aria-label="Conteo textual de repositorios por lenguaje principal">
+        {languageRows.map((language) => (
+          <li>
+            <span>{language.name}</span>
+            <strong>{number.format(language.count)} {language.count === 1 ? "repositorio" : "repositorios"}</strong>
+          </li>
+        ))}
+      </ul>
+      <p>El campo <code>language</code> de GitHub representa el lenguaje principal del repositorio, no sus bytes ni un nivel de dominio. Los repositorios sin lenguaje declarado se excluyen.</p>
+    </div>
+  </div>
+  <p class="stats-source">
+    Snapshot: <time datetime={stats.generatedAt}>{timestamp}</time> · Fuentes:
+    <a href={stats.sources.profile}>perfil público</a> y
+    <a href={stats.sources.repositories}>lista de repositorios</a> de la API de GitHub.
+  </p>
+</section>

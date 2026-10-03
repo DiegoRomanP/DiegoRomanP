@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Marca DR</title>
+  <desc id="description">Monograma DR con una línea de traza en color teal.</desc>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#faf9f6" stroke="#d5d4cc" stroke-width="2" />
+  <text x="32" y="34" fill="#151515" font-family="system-ui, sans-serif" font-size="22" font-weight="700" letter-spacing="-1" text-anchor="middle">DR</text>
+  <circle cx="13" cy="48" r="2.5" fill="#126d67" />
+  <path d="M16 48h10l5-6 5 8 6-7h6" fill="none" stroke="#126d67" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+  <circle cx="50" cy="43" r="2.5" fill="#126d67" />
+</svg>

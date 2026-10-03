@@ -1,0 +1,51 @@
+---
+import type { ProfileProject } from "../types";
+
+interface Props {
+  project: ProfileProject;
+  baseUrl: string;
+}
+
+const { project, baseUrl } = Astro.props;
+---
+
+<article class="project-feature" id={project.id} data-reveal>
+  <div class="feature-copy">
+    <div class="project-meta">
+      <span class="project-index">{project.number}</span>
+      <span>{project.category}</span>
+    </div>
+    <h3><a href={project.url}>{project.name}<span class="title-dash"> — </span>{project.descriptor}</a></h3>
+    <p class="feature-summary">{project.summary}</p>
+    <dl class="project-details">
+      <div>
+        <dt>Propósito</dt>
+        <dd>{project.purpose}</dd>
+      </div>
+      <div>
+        <dt>Alcance</dt>
+        <dd>{project.scope}</dd>
+      </div>
+    </dl>
+    <p class="stack-line"><span>Stack</span>{project.stack.join(" · ")}</p>
+  </div>
+  <figure class="feature-figure">
+    <picture>
+      <source
+        media="(max-width: 700px)"
+        srcset={`${baseUrl}assets/lexitrace-flow-mobile.svg`}
+        width="320"
+        height="460"
+      />
+      <img
+        src={`${baseUrl}assets/lexitrace-flow.svg`}
+        alt="Esquema funcional de LexiTrace: un PDF seleccionado alimenta una consulta y una respuesta con citas al documento, página y fragmento"
+        width="760"
+        height="322"
+        loading="lazy"
+        decoding="async"
+      />
+    </picture>
+    <figcaption>Esquema funcional · no es una captura de la aplicación</figcaption>
+  </figure>
+</article>

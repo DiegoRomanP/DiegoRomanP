@@ -1,0 +1,170 @@
+---
+import profile from "../../data/profile.json";
+import stats from "../../data/github-stats.json";
+import LexiTraceFeature from "../components/LexiTraceFeature.astro";
+import ProjectNoteCard from "../components/ProjectNoteCard.astro";
+import ProjectRow from "../components/ProjectRow.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import StatsStrip from "../components/StatsStrip.astro";
+import "../styles/global.css";
+
+const baseUrl = import.meta.env.BASE_URL;
+const buildRevision = import.meta.env.PUBLIC_BUILD_REVISION?.trim() || "local";
+const canonicalUrl = new URL(
+  baseUrl.replace(/^\/+/, ""),
+  Astro.site ?? new URL("https://diegoromanp.github.io"),
+).toString();
+const [lexitrace, studyAI, contextIA, creditExperiment] = profile.projects;
+---
+
+<!doctype html>
+<html lang="es" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Portafolio de Diego Román, estudiante de Ciencia de la Computación en la UNI: proyectos full stack con IA aplicada, RAG y machine learning." />
+    <meta name="theme-color" content="#faf9f6" />
+    <meta name="build-revision" content={buildRevision} />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}assets/favicon.svg`} />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{profile.name} — Ciencia de la Computación</title>
+  </head>
+  <body>
+    <SiteHeader profile={profile} />
+
+    <main id="contenido" class="container">
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow hero-eyebrow" data-reveal>
+          <span class="eyebrow-index">01 / PERFIL</span>
+          {profile.headline}
+        </p>
+        <div class="hero-layout">
+          <div class="hero-main" data-reveal>
+            <h1 id="hero-title">{profile.name}<span class="title-period" aria-hidden="true">.</span></h1>
+            <p class="hero-intro">{profile.intro}</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
+              <a class="text-link" href={profile.links.github}>GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <aside class="hero-note" aria-label="Temas de los proyectos" data-reveal>
+            <p class="note-label">Pistas / temas</p>
+            <ol>
+              <li><span>01</span>Fuentes que se pueden revisar</li>
+              <li><span>02</span>Planificación de estudio</li>
+              <li><span>03</span>IA aplicada y experimentos</li>
+            </ol>
+            <p class="note-foot">Prototipos y herramientas descritos por su alcance.</p>
+          </aside>
+        </div>
+        <div class="hero-baseline" aria-hidden="true">
+          <span class="hero-rule" data-line></span>
+          <span>BITÁCORA DE PROYECTOS</span>
+          <span>2022—</span>
+          <span>UNI</span>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section projects-section" aria-labelledby="projects-title">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow">Selección / 04 proyectos</p>
+          <h2 id="projects-title">Ideas en distintas escalas.</h2>
+          <p>Investigación documental, organización del estudio, herramientas para notas y una prueba de clasificación.</p>
+        </div>
+
+        <div class="projects-list">
+          <LexiTraceFeature project={lexitrace} baseUrl={baseUrl} />
+          <ProjectRow project={studyAI} />
+          <div class="project-note-grid">
+            <ProjectNoteCard project={contextIA} variant="notes" />
+            <ProjectNoteCard project={creditExperiment} variant="machine-learning" />
+          </div>
+        </div>
+      </section>
+
+      <StatsStrip stats={stats} baseUrl={baseUrl} />
+
+      <section id="herramientas" class="section tools-section" aria-labelledby="tools-title">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow">Con qué construyo</p>
+          <h2 id="tools-title">Herramientas por función.</h2>
+          <p>La lista refleja tecnologías que aparecen en los cuatro repositorios seleccionados; no es una escala de dominio.</p>
+        </div>
+        <div class="technology-groups">
+          {profile.technologyGroups.map((group, index) => (
+            <article class="technology-group" data-reveal>
+              <p class="project-index">{String(index + 1).padStart(2, "0")}</p>
+              <div>
+                <h3>{group.label}</h3>
+                <ul>
+                  {group.technologies.map((technology) => <li>{technology}</li>)}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="formacion" class="section formation-section" aria-labelledby="formation-title">
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow">Formación / aprendizaje</p>
+          <h2 id="formation-title">Una base en construcción.</h2>
+          <p>Estudios de pregrado, formación complementaria e idiomas.</p>
+        </div>
+        <div class="formation-layout">
+          <article class="academic-record" data-reveal>
+            <p class="record-index">01 / ACADÉMICA</p>
+            <h3>{profile.education.degree}</h3>
+            <p class="institution-name">{profile.education.institution}</p>
+            <p class="record-period">{profile.education.status} · {profile.education.period}</p>
+            <h4>Cursos relacionados</h4>
+            <ul class="course-list">
+              {profile.education.courses.map((course) => <li>{course}</li>)}
+            </ul>
+          </article>
+          <div class="learning-column">
+            <article class="supplementary-record" data-reveal>
+              <p class="record-index">02 / COMPLEMENTARIA</p>
+              <h3>Formación complementaria</h3>
+              <ul class="credential-list">
+                {profile.education.complementary.map((item) => (
+                  <li>
+                    <strong>{item.name}</strong>
+                    <span>{item.institution}{item.period ? ` · ${item.period}` : ""}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+            <article class="language-record" data-reveal>
+              <p class="record-index">03 / IDIOMAS</p>
+              <h3>Lenguas</h3>
+              <ul>
+                {profile.education.languages.map((language) => (
+                  <li>
+                    <strong>{language.name}</strong> · {language.level}
+                    {language.note && <span class="language-note"> · {language.note}</span>}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-note" data-reveal aria-labelledby="closing-title">
+        <p class="eyebrow">Gracias por llegar hasta aquí</p>
+        <h2 id="closing-title">¿Vemos el código?</h2>
+        <p>Los repositorios públicos reúnen el alcance y los detalles de cada proyecto.</p>
+        <a class="button button-primary" href={profile.links.repositories}>Explorar repositorios <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <SiteFooter profile={profile} buildRevision={buildRevision} />
+
+    <script>
+      import "../scripts/site.ts";
+    </script>
+  </body>
+</html>
