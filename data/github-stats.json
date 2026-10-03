@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T00:48:30.722Z",
+  "generatedAt": "2026-10-03T02:18:08.963Z",
   "sources": {
     "profile": "https://api.github.com/users/DiegoRomanP",
     "repositories": "https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100"
@@ -38,7 +38,7 @@
       "name": "DiegoRomanP",
       "url": "https://github.com/DiegoRomanP/DiegoRomanP",
       "stars": 0,
-      "language": "Python"
+      "language": "JavaScript"
     },
     {
       "name": "Give-me-some-Credit",
@@ -160,7 +160,7 @@
       },
       {
         "name": "Python",
-        "count": 8
+        "count": 7
       },
       {
         "name": "Shell",
@@ -176,6 +176,10 @@
       },
       {
         "name": "Java",
+        "count": 1
+      },
+      {
+        "name": "JavaScript",
         "count": 1
       }
     ]

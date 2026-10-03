@@ -9,9 +9,9 @@
   <rect x="16" y="95" width="200" height="5" rx="2.5" fill="#e3e1da" />
   <rect x="16" y="95" width="200.00" height="5" rx="2.5" fill="#14746d" />
   <text x="16" y="122" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Python</text>
-  <text x="304" y="122" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">8</text>
+  <text x="304" y="122" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">7</text>
   <rect x="16" y="129" width="200" height="5" rx="2.5" fill="#e3e1da" />
-  <rect x="16" y="129" width="200.00" height="5" rx="2.5" fill="#14746d" />
+  <rect x="16" y="129" width="175.00" height="5" rx="2.5" fill="#14746d" />
   <text x="16" y="156" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Shell</text>
   <text x="304" y="156" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">2</text>
   <rect x="16" y="163" width="200" height="5" rx="2.5" fill="#e3e1da" />
@@ -21,8 +21,8 @@
   <rect x="16" y="197" width="200" height="5" rx="2.5" fill="#e3e1da" />
   <rect x="16" y="197" width="50.00" height="5" rx="2.5" fill="#14746d" />
   <text x="16" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Otros lenguajes</text>
-  <text x="304" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">2</text>
+  <text x="304" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">3</text>
   <rect x="16" y="231" width="200" height="5" rx="2.5" fill="#e3e1da" />
-  <rect x="16" y="231" width="50.00" height="5" rx="2.5" fill="#14746d" />
+  <rect x="16" y="231" width="75.00" height="5" rx="2.5" fill="#14746d" />
   <text x="16" y="258" fill="#62625b" font-family="system-ui, sans-serif" font-size="13">n = 22 · excluye repos sin lenguaje informado</text>
 </svg>
