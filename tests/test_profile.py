@@ -294,6 +294,56 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertEqual(favicon.attrib.get("height"), "64")
         self.assertEqual(favicon.attrib.get("viewBox"), "0 0 64 64")
 
+    def test_lexitrace_schematic_captions_are_split_and_positioned_inside_viewboxes(self):
+        svg_namespace = "{http://www.w3.org/2000/svg}"
+        mobile = ElementTree.parse(ROOT / "public/assets/lexitrace-flow-mobile.svg").getroot()
+        desktop = ElementTree.parse(ROOT / "public/assets/lexitrace-flow.svg").getroot()
+
+        self.assertEqual((mobile.attrib.get("width"), mobile.attrib.get("height")), ("320", "460"))
+        self.assertEqual(mobile.attrib.get("viewBox"), "0 0 320 460")
+        mobile_lines = next(
+            [span.text for span in element.findall(f"{svg_namespace}tspan")]
+            for element in mobile.iter(f"{svg_namespace}text")
+            if [span.text for span in element.findall(f"{svg_namespace}tspan")]
+            == ["PDFs seleccionados · MVP local", "Sin asesoría legal"]
+        )
+        self.assertEqual(mobile_lines, ["PDFs seleccionados · MVP local", "Sin asesoría legal"])
+        mobile_caption = next(
+            element
+            for element in mobile.iter(f"{svg_namespace}text")
+            if [span.text for span in element.findall(f"{svg_namespace}tspan")] == mobile_lines
+        )
+        mobile_y = [int(span.attrib["y"]) for span in mobile_caption.findall(f"{svg_namespace}tspan")]
+        self.assertEqual(mobile_y, [428, 446])
+        self.assertLess(mobile_y[-1], int(mobile.attrib["height"]) - 10)
+
+        self.assertEqual((desktop.attrib.get("width"), desktop.attrib.get("height")), ("760", "322"))
+        self.assertEqual(desktop.attrib.get("viewBox"), "0 0 760 322")
+        desktop_lines = ["documento · página", "· fragmento"]
+        desktop_caption = next(
+            element
+            for element in desktop.iter(f"{svg_namespace}text")
+            if [span.text for span in element.findall(f"{svg_namespace}tspan")] == desktop_lines
+        )
+        citation_card = next(
+            element
+            for element in desktop.iter(f"{svg_namespace}rect")
+            if element.attrib.get("x") == "568"
+            and element.attrib.get("y") == "174"
+            and element.attrib.get("width") == "132"
+            and element.attrib.get("height") == "58"
+        )
+        card_left = int(citation_card.attrib["x"])
+        card_top = int(citation_card.attrib["y"])
+        card_right = card_left + int(citation_card.attrib["width"])
+        card_bottom = card_top + int(citation_card.attrib["height"])
+        text_x = [int(span.attrib["x"]) for span in desktop_caption.findall(f"{svg_namespace}tspan")]
+        text_y = [int(span.attrib["y"]) for span in desktop_caption.findall(f"{svg_namespace}tspan")]
+        self.assertEqual(text_x, [580, 580])
+        self.assertTrue(all(card_left < value < card_right for value in text_x))
+        self.assertTrue(all(card_top < value < card_bottom for value in text_y))
+        self.assertLess(text_y[-1], int(desktop.attrib["height"]) - 10)
+
     def test_pages_artifact_is_static_and_does_not_ship_the_audited_cache_module(self):
         if self.page is None:
             self.fail("Ejecuta npm run build antes de comprobar el alcance del artefacto Pages.")

@@ -20,5 +20,8 @@
   <text x="38" y="347" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="650">Respuesta con cita</text>
   <rect x="38" y="360" width="244" height="30" rx="6" fill="#e5eee9" />
   <text x="49" y="380" fill="#14746d" font-family="system-ui, sans-serif" font-size="14" font-weight="650">documento · página · fragmento</text>
-  <text x="20" y="437" fill="#62625b" font-family="system-ui, sans-serif" font-size="14">PDFs seleccionados · MVP local · sin asesoría legal</text>
+  <text x="20" y="428" fill="#62625b" font-family="system-ui, sans-serif" font-size="14">
+    <tspan x="20" y="428">PDFs seleccionados · MVP local</tspan>
+    <tspan x="20" y="446">Sin asesoría legal</tspan>
+  </text>
 </svg>
