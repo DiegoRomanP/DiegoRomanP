@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.83", "--headless", "--isolated"],
+      "timeout": 120,
+      "exposure": "direct",
+      "description": "Inspección visual del perfil GitHub en Chromium headless con sesión aislada."
+    }
+  }
+}

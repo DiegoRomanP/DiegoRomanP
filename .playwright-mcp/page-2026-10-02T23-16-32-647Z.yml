@@ -1,0 +1,455 @@
+- generic [ref=f16e2]:
+  - generic [ref=f16e3]:
+    - link "Skip to content" [ref=f16e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f16e9]:
+      - heading "Navigation Menu" [level=2] [ref=f16e10]
+      - generic [ref=f16e11]:
+        - link "Homepage" [ref=f16e13] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f16e16]:
+          - navigation "Global" [ref=f16e17]:
+            - list [ref=f16e18]:
+              - listitem [ref=f16e19]:
+                - button "Platform" [ref=f16e21] [cursor=pointer]
+              - listitem [ref=f16e24]:
+                - button "Solutions" [ref=f16e26] [cursor=pointer]
+              - listitem [ref=f16e29]:
+                - button "Resources" [ref=f16e31] [cursor=pointer]
+              - listitem [ref=f16e34]:
+                - button "Open Source" [ref=f16e36] [cursor=pointer]
+              - listitem [ref=f16e39]:
+                - button "Enterprise" [ref=f16e41] [cursor=pointer]
+              - listitem [ref=f16e44]:
+                - link "Pricing" [ref=f16e45] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+          - generic [ref=f16e46]:
+            - button "Search or jump to, type / to search" [ref=f16e48] [cursor=pointer]:
+              - generic [ref=f16e51]:
+                - generic [ref=f16e52]: Search
+                - generic [aria-hidden] [ref=f16e53]: /
+            - link "Sign in" [ref=f16e55] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fjorgemunozl
+            - link "Sign up" [ref=f16e58] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header
+            - button "Appearance settings" [ref=f16e61] [cursor=pointer]
+  - main [ref=f16e67]:
+    - generic [ref=f16e70]:
+      - generic [ref=f16e71]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@jorgemunozl"
+            - generic:
+              - strong: jorgemunozl
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fjorgemunozl
+      - navigation "User profile" [ref=f16e74]:
+        - link "Overview" [ref=f16e75] [cursor=pointer]:
+          - /url: /jorgemunozl
+        - link "Repositories 24" [ref=f16e78] [cursor=pointer]:
+          - /url: /jorgemunozl?tab=repositories
+          - text: Repositories
+          - generic "24" [ref=f16e81]
+        - link "Projects" [ref=f16e82] [cursor=pointer]:
+          - /url: /jorgemunozl?tab=projects
+        - link "Packages" [ref=f16e85] [cursor=pointer]:
+          - /url: /jorgemunozl?tab=packages
+        - link "Stars 716" [ref=f16e88] [cursor=pointer]:
+          - /url: /jorgemunozl?tab=stars
+          - text: Stars
+          - generic "716" [ref=f16e91]
+    - generic [ref=f16e93]:
+      - generic [ref=f16e95]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@jorgemunozl"
+            - generic:
+              - generic:
+                - strong: jorgemunozl
+            - generic:
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fjorgemunozl
+        - generic [ref=f16e96]:
+          - generic [ref=f16e97]:
+            - generic [ref=f16e98]:
+              - link [ref=f16e99] [cursor=pointer]:
+                - /url: https://avatars.githubusercontent.com/u/133463267?v=4
+                - img "View jorgemunozl's full-sized avatar" [ref=f16e100]
+              - generic [ref=f16e103]:
+                - img "thought_balloon" [ref=f16e106]
+                - generic: Getting excited
+            - heading "jorge-munoz-lar jorgemunozl" [level=1] [ref=f16e108]:
+              - generic [ref=f16e109]: jorge-munoz-lar
+              - generic [ref=f16e110]: jorgemunozl
+          - generic [ref=f16e111]:
+            - link "Follow" [ref=f16e118] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fjorgemunozl
+            - generic [ref=f16e119]:
+              - generic [ref=f16e121]:
+                - link "@dianamunozlar" [ref=f16e122] [cursor=pointer]:
+                  - /url: https://github.com/dianamunozlar
+                - text: I like neural networks, computational quantum mechanics, Arch 🐧, GPU's, robotics, R. Feynman, Deep Learning
+                - link "@Pymut" [ref=f16e123] [cursor=pointer]:
+                  - /url: https://github.com/Pymut
+                - link "@karpathy" [ref=f16e124] [cursor=pointer]:
+                  - /url: https://github.com/karpathy
+                - link "@google-deepmind" [ref=f16e125] [cursor=pointer]:
+                  - /url: https://github.com/google-deepmind
+              - generic [ref=f16e127]:
+                - link "587 followers" [ref=f16e128] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl?tab=followers
+                - text: ·
+                - link "1.7k following" [ref=f16e131] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl?tab=following
+              - list [ref=f16e132]:
+                - 'listitem "Organization: @NONHUMAN-SITE" [ref=f16e133]':
+                  - link "@NONHUMAN-SITE" [ref=f16e138] [cursor=pointer]:
+                    - /url: https://github.com/NONHUMAN-SITE
+                - 'listitem "Home location: Lima, Peru" [ref=f16e139]':
+                  - generic [ref=f16e142]: Lima, Peru
+                - listitem [ref=f16e143]:
+                  - generic [ref=f16e146]: 18:16 - same time
+                - listitem [ref=f16e147]:
+                  - link "https://jorgemunozl.github.io/" [ref=f16e150] [cursor=pointer]:
+                    - /url: https://jorgemunozl.github.io/
+                - listitem [ref=f16e151]:
+                  - link "https://orcid.org/0009-0003-3400-582X" [ref=f16e154] [cursor=pointer]:
+                    - /url: https://orcid.org/0009-0003-3400-582X
+                - listitem [ref=f16e155]:
+                  - img "X" [ref=f16e156]
+                  - link "@jorgemunozla" [ref=f16e158] [cursor=pointer]:
+                    - /url: https://x.com/jorgemunozla
+                - listitem [ref=f16e159]:
+                  - img "Instagram" [ref=f16e160]
+                  - link "jorgemunozla" [ref=f16e163] [cursor=pointer]:
+                    - /url: https://www.instagram.com/jorgemunozla/
+                - listitem [ref=f16e164]:
+                  - img "LinkedIn" [ref=f16e165]
+                  - link "in/jorgemunozlaredo" [ref=f16e168] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/jorgemunozlaredo/
+                - listitem [ref=f16e169]:
+                  - link "https://huggingface.co/jorgemunozl" [ref=f16e172] [cursor=pointer]:
+                    - /url: https://huggingface.co/jorgemunozl
+          - generic [ref=f16e173]:
+            - heading [level=2] [ref=f16e174]:
+              - link "Achievements" [ref=f16e175] [cursor=pointer]:
+                - /url: /jorgemunozl?tab=achievements
+            - generic [ref=f16e176]:
+              - link [ref=f16e177] [cursor=pointer]:
+                - /url: /jorgemunozl?achievement=starstruck&tab=achievements
+                - 'img "Achievement: Starstruck" [ref=f16e178]'
+              - 'link "Achievement: Pull Shark x2" [ref=f16e179] [cursor=pointer]':
+                - /url: /jorgemunozl?achievement=pull-shark&tab=achievements
+                - 'img "Achievement: Pull Shark" [ref=f16e180]'
+                - generic [ref=f16e181]: x2
+              - link [ref=f16e182] [cursor=pointer]:
+                - /url: /jorgemunozl?achievement=yolo&tab=achievements
+                - 'img "Achievement: YOLO" [ref=f16e183]'
+          - button "Block or report user" [ref=f16e185] [cursor=pointer]
+      - generic [ref=f16e190]:
+        - generic [ref=f16e192]:
+          - generic [ref=f16e194]:
+            - link "jorgemunozl" [ref=f16e195] [cursor=pointer]:
+              - /url: /jorgemunozl/jorgemunozl
+            - generic [ref=f16e196]: /
+            - text: README.md
+          - article [ref=f16e197]:
+            - generic [ref=f16e198]:
+              - heading "Hi there, I’m Jorge Munoz 👋" [level=1] [ref=f16e199]
+              - 'link "Permalink: Hi there, I’m Jorge Munoz 👋" [ref=f16e200] [cursor=pointer]':
+                - /url: "#hi-there-im-jorge-munoz-"
+            - generic [ref=f16e203]:
+              - heading "🔭 About Me" [level=2] [ref=f16e204]
+              - 'link "Permalink: 🔭 About Me" [ref=f16e205] [cursor=pointer]':
+                - /url: "#-about-me"
+            - paragraph [ref=f16e208]:
+              - text: I like STEM!, the
+              - link "Feynman a-like thinking" [ref=f16e209] [cursor=pointer]:
+                - /url: https://archive.org/details/surely-you-re-joking-mister-feynman-richard-feynman/page/10/mode/2up
+              - text: is too good to be true.
+              - strong [ref=f16e210]: Mathematics , programming and suffer
+              - text: are kind of fun. Although it's a pain in the ass effort, but pretty rewarding!!
+            - paragraph:
+              - link "Feynman and the bongos":
+                - /url: /jorgemunozl/jorgemunozl/blob/main/feynman-bongos.jpg
+                - img "Feynman and the bongos" [ref=f16e211] [cursor=pointer]
+            - list [ref=f16e212]:
+              - listitem [ref=f16e213]:
+                - text: 🌱 Bringing A.I to the physical world.
+                - link "VLA's Model" [ref=f16e214] [cursor=pointer]:
+                  - /url: https://github.com/huggingface/lerobot.git
+              - listitem [ref=f16e215]: 🤔 Code, mathematics and critical thingking is the holy grail of life.
+              - listitem [ref=f16e216]:
+                - text: ♟️ I
+                - emphasis [ref=f16e217]: love/hate
+                - text: chess.
+                - link "Let's play a game!" [ref=f16e218] [cursor=pointer]:
+                  - /url: https://www.chess.com/member/jorgemunozl
+                - text: .
+              - listitem [ref=f16e219]:
+                - text: 🍅
+                - emphasis [ref=f16e220]: Pomodoro Lover
+                - link "(Strongly Recommended)" [ref=f16e221] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=sUwD3GRPJos
+              - listitem [ref=f16e222]:
+                - text: "🐧 Linux User :"
+                - link "Arch - I3" [ref=f16e223] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/arch-i3-setup.git
+                - text: ", Ubuntu Xorg."
+              - listitem [ref=f16e224]:
+                - text: 🔮 Obsessed with the note-taking
+                - link "Zettelkasten method" [ref=f16e225] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=E6ySG7xYgjY
+                - text: .
+              - listitem [ref=f16e226]:
+                - text: 🥴 Personal Website!!
+                - link "jorgemunozl.github.io" [ref=f16e227] [cursor=pointer]:
+                  - /url: https://jorgemunozl.github.io
+            - paragraph [ref=f16e228]: Richard Feynman playing the bongos, the most clever person that this world has ever known ! -->
+            - generic [ref=f16e229]:
+              - heading "💻 Languages & Libraries" [level=2] [ref=f16e230]
+              - 'link "Permalink: 💻 Languages & Libraries" [ref=f16e231] [cursor=pointer]':
+                - /url: "#-languages--libraries"
+            - list [ref=f16e234]:
+              - listitem [ref=f16e235]:
+                - strong [ref=f16e236]: "Main Language:"
+                - text: Python,
+                - strong [ref=f16e237]: Second Languages
+                - text: ": React, Node, Vite, Lua, Bash, C++, MatLab."
+              - listitem [ref=f16e238]:
+                - strong [ref=f16e239]: Physical AI
+                - text: ": Lerobot, Aloha, Mujoco, Libero."
+              - listitem [ref=f16e240]:
+                - strong [ref=f16e241]: "Quantum Computing:"
+                - link "Qiskit" [ref=f16e242] [cursor=pointer]:
+                  - /url: https://qiskit-community.github.io/qiskit-nature/tutorials/11_quadratic_hamiltonian_and_slater_determinants.html
+              - listitem [ref=f16e243]:
+                - strong [ref=f16e244]: "AI4Science:"
+                - link "PhysicsNemo" [ref=f16e245] [cursor=pointer]:
+                  - /url: https://docs.nvidia.com/physicsnemo/latest/overview.html
+                - text: ","
+              - listitem [ref=f16e246]:
+                - strong [ref=f16e247]: "Deep Learning:"
+                - link "Pytorch" [ref=f16e248] [cursor=pointer]:
+                  - /url: https://docs.pytorch.org/docs/stable/index.html
+              - listitem [ref=f16e249]:
+                - strong [ref=f16e250]: "GenerativeAI:"
+                - link "Hugging Face Transformers" [ref=f16e251] [cursor=pointer]:
+                  - /url: https://github.com/huggingface/transformers.git
+                - link "PEFT" [ref=f16e252] [cursor=pointer]:
+                  - /url: https://github.com/huggingface/peft.git
+                - link "Datasets" [ref=f16e253] [cursor=pointer]:
+                  - /url: https://github.com/huggingface/datasets.git
+              - listitem [ref=f16e254]:
+                - strong [ref=f16e255]: "Agentic AI:"
+                - link "LangGraph" [ref=f16e256] [cursor=pointer]:
+                  - /url: https://academy.langchain.com/?_gl=1*mi3mwc*_gcl_au*OTM1ODU4NjExLjE3NjEyNjQxNTc.*_ga*OTgyNjcwNzM0LjE3NjEyNjQxNTk.*_ga_47WX3HKKY2*czE3NjEyNjQxNTgkbzEkZzEkdDE3NjEyNjQxOTUkajIzJGwwJGgw
+                - text: ", Clawdbot."
+              - listitem [ref=f16e257]:
+                - strong [ref=f16e258]: "Other Tools:"
+                - text: Git & GitHub, Jupyter Notebooks, SSH, VS Code Tunnels,
+                - link "GPU rents via SSH RunPod" [ref=f16e259] [cursor=pointer]:
+                  - /url: https://console.runpod.io/
+                - text: ", Docker,"
+                - link "Latex" [ref=f16e260] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/arch-nvim-latex.git
+                - text: ","
+                - link "Zotero" [ref=f16e261] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/syncZ.git
+                - text: ","
+                - link "many screens" [ref=f16e262] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/input-leap-computer.git
+                - text: ","
+                - link "Unsloth" [ref=f16e263] [cursor=pointer]:
+                  - /url: https://unsloth.ai/
+                - text: ","
+                - link "OpenAIAPI" [ref=f16e264] [cursor=pointer]:
+                  - /url: https://platform.openai.com/docs/guides/text
+                - text: ","
+                - link "Manim" [ref=f16e265] [cursor=pointer]:
+                  - /url: https://www.manim.community/
+                - text: ", 3D modeling with Autodesk Inventor, Cursor Environments."
+            - generic [ref=f16e266]:
+              - heading "🔬 Research & Projects" [level=2] [ref=f16e267]
+              - 'link "Permalink: 🔬 Research & Projects" [ref=f16e268] [cursor=pointer]':
+                - /url: "#-research--projects"
+            - list [ref=f16e271]:
+              - listitem [ref=f16e272]:
+                - link "Study of point defects over the diamond to see if its good material for quantum techonologies" [ref=f16e273] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/diamonty.git
+                - text: 2026 - II Winter
+              - listitem [ref=f16e274]:
+                - link "Equivariant Message Passing Neural Networks for Ionic Batteries" [ref=f16e275] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/mlpdft.git
+                - text: 2026 - I Autumn
+              - listitem [ref=f16e276]:
+                - link "Understanding Vision Language Action Models" [ref=f16e277] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/vla-test.git
+                - text: 2026 - 0 Summer
+              - listitem [ref=f16e278]:
+                - link "Solving the Many Electrons Schrodinger Equation with Transformers" [ref=f16e279] [cursor=pointer]:
+                  - /url: https://jorgemunozl.github.io/portfolio/project_transformers
+                - text: 2025 - III Spring
+              - listitem [ref=f16e280]:
+                - link "Fine tunning Llama Vision for the recognisement of flowcharts" [ref=f16e281] [cursor=pointer]:
+                  - /url: https://jorgemunozl.github.io/portfolio/project-flowcharts
+                - text: 2025 - II Winter
+              - listitem [ref=f16e282]:
+                - link "Synthetic Flowchart generator trough a orchestration using Langgraph" [ref=f16e283] [cursor=pointer]:
+                  - /url: https://github.com/jorgemunozl/Synthetic-Data.git
+                - text: 2025 - I Autumn
+            - generic [ref=f16e284]:
+              - heading "📫 How to Reach Me" [level=2] [ref=f16e285]
+              - 'link "Permalink: 📫 How to Reach Me" [ref=f16e286] [cursor=pointer]':
+                - /url: "#-how-to-reach-me"
+            - list [ref=f16e289]:
+              - listitem [ref=f16e290]:
+                - text: "Email:"
+                - link "alvaro18ml@gmail.com" [ref=f16e291] [cursor=pointer]:
+                  - /url: mailto:alvaro18ml@gmail.com
+            - paragraph [ref=f16e292]:
+              - link "\"It has to do with curiosity, it has to do with people wondering what make something do something\"" [ref=f16e293] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=JbesmfdUMkw
+            - generic [ref=f16e294]:
+              - heading "📊 GitHub Stats:" [level=2] [ref=f16e295]
+              - 'link "Permalink: 📊 GitHub Stats:" [ref=f16e296] [cursor=pointer]':
+                - /url: "#-github-stats"
+            - paragraph [ref=f16e299]:
+              - link [ref=f16e300] [cursor=pointer]:
+                - /url: https://git.io/streak-stats
+                - img "GitHub Streak" [ref=f16e301]
+            - img "GitHub Stats" [ref=f16e304]
+        - generic [ref=f16e306]:
+          - heading "Pinned Loading" [level=2] [ref=f16e307]:
+            - text: Pinned
+            - generic: Loading
+            - status
+          - list [ref=f16e309]:
+            - listitem [ref=f16e310]:
+              - generic [ref=f16e312]:
+                - generic [ref=f16e314]:
+                  - link "psiformer_torch" [ref=f16e318] [cursor=pointer]:
+                    - /url: /jorgemunozl/psiformer_torch
+                  - text: Public
+                - paragraph [ref=f16e319]: self-attention neural torch ansatz for electronic structure calculations introduced in the paper “A Self-attention Ansatz for ab initio Quantum Chemistry” from Google Deep Mind.
+                - paragraph [ref=f16e320]:
+                  - generic [ref=f16e321]: TeX
+                  - link [ref=f16e323] [cursor=pointer]:
+                    - /url: /jorgemunozl/psiformer_torch/stargazers
+                    - img "stars" [ref=f16e324]
+                    - text: "17"
+                  - link [ref=f16e326] [cursor=pointer]:
+                    - /url: /jorgemunozl/psiformer_torch/forks
+                    - img "forks" [ref=f16e327]
+                    - text: "2"
+            - listitem [ref=f16e329]:
+              - generic [ref=f16e331]:
+                - generic [ref=f16e333]:
+                  - link "mlpdft" [ref=f16e337] [cursor=pointer]:
+                    - /url: /jorgemunozl/mlpdft
+                  - text: Public
+                - paragraph [ref=f16e338]: Transfer learning using a high order message passing foundational model to F-Li-B cells.
+                - paragraph [ref=f16e339]:
+                  - generic [ref=f16e340]: Python
+                  - link [ref=f16e342] [cursor=pointer]:
+                    - /url: /jorgemunozl/mlpdft/stargazers
+                    - img "stars" [ref=f16e343]
+                    - text: "4"
+            - listitem [ref=f16e345]:
+              - generic [ref=f16e347]:
+                - generic [ref=f16e349]:
+                  - link "Finetunning-Llama-Vision-11b" [ref=f16e353] [cursor=pointer]:
+                    - /url: /jorgemunozl/Finetunning-Llama-Vision-11b
+                  - text: Public
+                - paragraph [ref=f16e354]: Inference and finnetunning of a VLM (LLama Vision 11b) using the Unsloth, PEFT libraries and torch.
+                - paragraph [ref=f16e355]:
+                  - generic [ref=f16e356]: Python
+                  - link [ref=f16e358] [cursor=pointer]:
+                    - /url: /jorgemunozl/Finetunning-Llama-Vision-11b/stargazers
+                    - img "stars" [ref=f16e359]
+                    - text: "11"
+                  - link [ref=f16e361] [cursor=pointer]:
+                    - /url: /jorgemunozl/Finetunning-Llama-Vision-11b/forks
+                    - img "fork" [ref=f16e362]
+                    - text: "1"
+            - listitem [ref=f16e364]:
+              - generic [ref=f16e366]:
+                - generic [ref=f16e368]:
+                  - link "HeatEquationPINN" [ref=f16e372] [cursor=pointer]:
+                    - /url: /jorgemunozl/HeatEquationPINN
+                  - text: Public
+                - paragraph [ref=f16e373]: An implementation of a Physics-Informed Neural Network (PINN) for solving the heat equation subject to zero Neumann boundary conditions.
+                - paragraph [ref=f16e374]:
+                  - generic [ref=f16e375]: Python
+                  - link [ref=f16e377] [cursor=pointer]:
+                    - /url: /jorgemunozl/HeatEquationPINN/stargazers
+                    - img "stars" [ref=f16e378]
+                    - text: "11"
+            - listitem [ref=f16e380]:
+              - generic [ref=f16e382]:
+                - generic [ref=f16e384]:
+                  - link "phisy" [ref=f16e388] [cursor=pointer]:
+                    - /url: /jorgemunozl/phisy
+                  - text: Public
+                - paragraph [ref=f16e389]: A set of physics/mathematics scripts for different concepts.
+                - paragraph [ref=f16e390]:
+                  - generic [ref=f16e391]: Python
+                  - link [ref=f16e393] [cursor=pointer]:
+                    - /url: /jorgemunozl/phisy/stargazers
+                    - img "stars" [ref=f16e394]
+                    - text: "16"
+            - listitem [ref=f16e396]:
+              - generic [ref=f16e398]:
+                - generic [ref=f16e400]:
+                  - link "jorgemunozl.github.io" [ref=f16e404] [cursor=pointer]:
+                    - /url: /jorgemunozl/jorgemunozl.github.io
+                  - text: Public
+                - paragraph [ref=f16e405]: My Blog and personal website
+                - paragraph [ref=f16e406]:
+                  - generic [ref=f16e407]: TypeScript
+                  - link [ref=f16e409] [cursor=pointer]:
+                    - /url: /jorgemunozl/jorgemunozl.github.io/stargazers
+                    - img "stars" [ref=f16e410]
+                    - text: "10"
+        - img "Loading" [ref=f16e416]
+  - contentinfo [ref=f16e419]:
+    - heading "Footer" [level=2] [ref=f16e420]
+    - generic [ref=f16e421]:
+      - generic [ref=f16e422]:
+        - link "GitHub Homepage" [ref=f16e423] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f16e426]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f16e427]:
+        - heading "Footer navigation" [level=3] [ref=f16e428]
+        - list "Footer navigation" [ref=f16e429]:
+          - listitem [ref=f16e430]:
+            - link "Terms" [ref=f16e431] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f16e432]:
+            - link "Privacy" [ref=f16e433] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f16e434]:
+            - link "Security" [ref=f16e435] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f16e436]:
+            - link "Status" [ref=f16e437] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f16e438]:
+            - link "Community" [ref=f16e439] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f16e440]:
+            - link "Docs" [ref=f16e441] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f16e442]:
+            - link "Contact" [ref=f16e443] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f16e444]:
+            - button "Manage cookies" [ref=f16e446] [cursor=pointer]
+          - listitem [ref=f16e447]:
+            - button "Do not share my personal information" [ref=f16e449] [cursor=pointer]

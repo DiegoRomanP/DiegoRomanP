@@ -1,0 +1,275 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - link "Skip to content" [ref=f1e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f1e9]:
+      - heading "Navigation Menu" [level=2] [ref=f1e10]
+      - generic [ref=f1e12]:
+        - button "Toggle navigation" [ref=f1e14] [cursor=pointer]
+        - link "Homepage" [ref=f1e18] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f1e21]:
+          - link "Sign in" [ref=f1e22] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FDiegoRomanP
+          - button "Appearance settings" [ref=f1e25] [cursor=pointer]
+  - main [ref=f1e31]:
+    - generic [ref=f1e33]:
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - link [ref=f1e39] [cursor=pointer]:
+            - /url: https://avatars.githubusercontent.com/u/194720340?v=4
+            - img "View DiegoRomanP's full-sized avatar" [ref=f1e40]
+          - heading "DiegoRomanP" [level=1] [ref=f1e42]
+        - generic [ref=f1e44]:
+          - link "Follow" [ref=f1e51] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FDiegoRomanP
+          - generic [ref=f1e52]:
+            - generic [ref=f1e54]:
+              - link "6 followers" [ref=f1e55] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP?tab=followers
+              - text: ·
+              - link "2 following" [ref=f1e58] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP?tab=following
+            - list
+        - button "Block or report user" [ref=f1e60] [cursor=pointer]
+      - generic [ref=f1e63]:
+        - navigation "User profile" [ref=f1e65]:
+          - link "Overview" [ref=f1e66] [cursor=pointer]:
+            - /url: /DiegoRomanP
+          - link "Repositories 24" [ref=f1e69] [cursor=pointer]:
+            - /url: /DiegoRomanP?tab=repositories
+            - text: Repositories
+            - generic "24" [ref=f1e72]
+          - link "Projects" [ref=f1e73] [cursor=pointer]:
+            - /url: /DiegoRomanP?tab=projects
+          - link "Packages" [ref=f1e76] [cursor=pointer]:
+            - /url: /DiegoRomanP?tab=packages
+          - link "Stars 4" [ref=f1e79] [cursor=pointer]:
+            - /url: /DiegoRomanP?tab=stars
+            - text: Stars
+            - generic "4" [ref=f1e82]
+        - generic [ref=f1e84]:
+          - generic [ref=f1e86]:
+            - generic [ref=f1e88]:
+              - link "DiegoRomanP" [ref=f1e89] [cursor=pointer]:
+                - /url: /DiegoRomanP/DiegoRomanP
+              - generic [ref=f1e90]: /
+              - text: README.md
+            - article [ref=f1e91]:
+              - generic [ref=f1e92]:
+                - heading "Hola, soy Diego Román 👋" [level=1] [ref=f1e93]
+                - 'link "Permalink: Hola, soy Diego Román 👋" [ref=f1e94] [cursor=pointer]':
+                  - /url: "#hola-soy-diego-román-"
+              - paragraph [ref=f1e97]:
+                - link [ref=f1e98] [cursor=pointer]:
+                  - /url: /DiegoRomanP/DiegoRomanP/blob/main/docs/assets/profile-banner.svg
+                  - img "Ilustración abstracta de rutas de datos que conectan nodos de un laboratorio digital" [ref=f1e99]
+              - paragraph [ref=f1e100]: "Estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería (UNI) desde 2022. Me enfoco en construir aplicaciones full stack con IA aplicada: en mis proyectos combino interfaces, APIs y datos con flujos RAG y modelos predictivos, procurando que las respuestas puedan revisarse."
+              - paragraph [ref=f1e101]:
+                - link "Ver mi portafolio web" [ref=f1e102] [cursor=pointer]:
+                  - /url: https://diegoromanp.github.io/DiegoRomanP/
+                - text: ·
+                - link "Explorar repositorios" [ref=f1e103] [cursor=pointer]:
+                  - /url: https://github.com/DiegoRomanP?tab=repositories
+              - generic [ref=f1e104]:
+                - heading "Proyectos destacados" [level=2] [ref=f1e105]
+                - 'link "Permalink: Proyectos destacados" [ref=f1e106] [cursor=pointer]':
+                  - /url: "#proyectos-destacados"
+              - list [ref=f1e109]:
+                - listitem [ref=f1e110]:
+                  - strong [ref=f1e111]:
+                    - link "LexiTrace — evidencia documental con RAG" [ref=f1e112] [cursor=pointer]:
+                      - /url: https://github.com/DiegoRomanP/lexitrace-legal-evidence-rag
+                    - text: ":"
+                  - text: MVP local de investigación documental sobre PDFs seleccionados, con citas al documento, página y fragmento. No ofrece asesoría legal.
+                  - strong [ref=f1e113]: "Stack:"
+                  - text: FastAPI, React, TypeScript, SQLite y Qdrant.
+                - listitem [ref=f1e114]:
+                  - strong [ref=f1e115]:
+                    - link "StudyAI" [ref=f1e116] [cursor=pointer]:
+                      - /url: https://github.com/DiegoRomanP/StudyAI
+                    - text: ":"
+                  - text: crea planes de estudio a partir de documentos y metas, con sesiones, materiales, cuestionarios y repaso espaciado SM-2. El LLM simulado está activo por defecto; el RAG semántico es opcional.
+                  - strong [ref=f1e117]: "Stack:"
+                  - text: FastAPI, React y TypeScript.
+                - listitem [ref=f1e118]:
+                  - strong [ref=f1e119]:
+                    - link "Context IA Obsidian" [ref=f1e120] [cursor=pointer]:
+                      - /url: https://github.com/DiegoRomanP/context-ia-obsidian
+                    - text: ":"
+                  - text: plugin con acciones de IA para resumir o explicar notas, investigar con fuentes y generar imágenes.
+                  - link "Release v0.1.0" [ref=f1e121] [cursor=pointer]:
+                    - /url: https://github.com/DiegoRomanP/context-ia-obsidian/releases/tag/v0.1.0
+                  - text: .
+                  - strong [ref=f1e122]: "Stack:"
+                  - text: TypeScript.
+                - listitem [ref=f1e123]:
+                  - strong [ref=f1e124]:
+                    - link "Give me some Credit" [ref=f1e125] [cursor=pointer]:
+                      - /url: https://github.com/DiegoRomanP/Give-me-some-Credit
+                    - text: ":"
+                  - text: experimento de predicción crediticia con XGBoost que compara métodos de balanceo.
+                  - strong [ref=f1e126]: "Stack:"
+                  - text: FastAPI, Streamlit y Docker.
+              - generic [ref=f1e127]:
+                - heading "Formación" [level=2] [ref=f1e128]
+                - 'link "Permalink: Formación" [ref=f1e129] [cursor=pointer]':
+                  - /url: "#formación"
+              - generic [ref=f1e132]:
+                - heading "Académica" [level=3] [ref=f1e133]
+                - 'link "Permalink: Académica" [ref=f1e134] [cursor=pointer]':
+                  - /url: "#académica"
+              - paragraph [ref=f1e137]:
+                - strong [ref=f1e138]: Ciencia de la Computación — Universidad Nacional de Ingeniería (UNI)
+                - text: · estudiante de pregrado · 2022–presente
+              - paragraph [ref=f1e139]:
+                - strong [ref=f1e140]: "Cursos:"
+                - text: Estructuras de Datos, Base de Datos, Ingeniería de Software y Sistemas Operativos.
+              - generic [ref=f1e141]:
+                - heading "Complementaria" [level=3] [ref=f1e142]
+                - 'link "Permalink: Complementaria" [ref=f1e143] [cursor=pointer]':
+                  - /url: "#complementaria"
+              - list [ref=f1e146]:
+                - listitem [ref=f1e147]:
+                  - strong [ref=f1e148]: Diplomado en Ciencia de Datos Avanzada
+                  - text: — Data Mining Consulting (2025).
+                - listitem [ref=f1e149]:
+                  - strong [ref=f1e150]: AI Foundations Associate
+                  - text: — Oracle University (2025).
+                - listitem [ref=f1e151]:
+                  - strong [ref=f1e152]: Claude Code in Action (2026)
+                  - text: "y"
+                  - strong [ref=f1e153]: Claude Code 101
+                  - text: — Anthropic.
+              - generic [ref=f1e154]:
+                - heading "Idiomas" [level=3] [ref=f1e155]
+                - 'link "Permalink: Idiomas" [ref=f1e156] [cursor=pointer]':
+                  - /url: "#idiomas"
+              - paragraph [ref=f1e159]: Español nativo · inglés avanzado (C1), formación en ICPNA.
+              - generic [ref=f1e160]:
+                - heading "Tecnologías" [level=2] [ref=f1e161]
+                - 'link "Permalink: Tecnologías" [ref=f1e162] [cursor=pointer]':
+                  - /url: "#tecnologías"
+              - paragraph [ref=f1e165]:
+                - link [ref=f1e166] [cursor=pointer]:
+                  - /url: /DiegoRomanP/DiegoRomanP/blob/main/docs/assets/badges/python.svg
+                  - img "Python" [ref=f1e167]
+                - link [ref=f1e168] [cursor=pointer]:
+                  - /url: /DiegoRomanP/DiegoRomanP/blob/main/docs/assets/badges/fastapi.svg
+                  - img "FastAPI" [ref=f1e169]
+                - link [ref=f1e170] [cursor=pointer]:
+                  - /url: /DiegoRomanP/DiegoRomanP/blob/main/docs/assets/badges/react.svg
+                  - img "React" [ref=f1e171]
+                - link [ref=f1e172] [cursor=pointer]:
+                  - /url: /DiegoRomanP/DiegoRomanP/blob/main/docs/assets/badges/typescript.svg
+                  - img "TypeScript" [ref=f1e173]
+              - generic [ref=f1e174]:
+                - heading "Enlaces" [level=2] [ref=f1e175]
+                - 'link "Permalink: Enlaces" [ref=f1e176] [cursor=pointer]':
+                  - /url: "#enlaces"
+              - paragraph [ref=f1e179]:
+                - link "LinkedIn" [ref=f1e180] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/diego-osvaldo-roman-palomino/
+                - text: ·
+                - link "GitHub" [ref=f1e181] [cursor=pointer]:
+                  - /url: https://github.com/DiegoRomanP
+          - generic [ref=f1e183]:
+            - heading "Popular repositories Loading" [level=2] [ref=f1e184]:
+              - text: Popular repositories
+              - generic: Loading
+              - status
+            - list [ref=f1e186]:
+              - listitem [ref=f1e187]:
+                - generic [ref=f1e189]:
+                  - generic [ref=f1e190]:
+                    - link "lexitrace-legal-evidence-rag" [ref=f1e192] [cursor=pointer]:
+                      - /url: /DiegoRomanP/lexitrace-legal-evidence-rag
+                    - generic [ref=f1e193]: Public
+                  - paragraph [ref=f1e195]: Asistente de investigacion juridica con RAG que convierte PDFs seleccionables en respuestas trazables con evidencia y citas verificables.
+                  - paragraph [ref=f1e196]:
+                    - generic [ref=f1e197]: Python
+                    - link [ref=f1e199] [cursor=pointer]:
+                      - /url: /DiegoRomanP/lexitrace-legal-evidence-rag/stargazers
+                      - img "star" [ref=f1e200]
+                      - text: "1"
+              - listitem [ref=f1e202]:
+                - generic [ref=f1e204]:
+                  - generic [ref=f1e205]:
+                    - link "DiegoRomanP" [ref=f1e207] [cursor=pointer]:
+                      - /url: /DiegoRomanP/DiegoRomanP
+                    - generic [ref=f1e208]: Public
+                  - paragraph
+                  - paragraph [ref=f1e210]:
+                    - generic [ref=f1e211]: Python
+              - listitem [ref=f1e213]:
+                - generic [ref=f1e215]:
+                  - generic [ref=f1e216]:
+                    - link "Recognition-of-dogs-and-cats" [ref=f1e218] [cursor=pointer]:
+                      - /url: /DiegoRomanP/Recognition-of-dogs-and-cats
+                    - generic [ref=f1e219]: Public
+                  - paragraph
+                  - paragraph [ref=f1e221]:
+                    - generic [ref=f1e222]: Jupyter Notebook
+              - listitem [ref=f1e224]:
+                - generic [ref=f1e226]:
+                  - generic [ref=f1e227]:
+                    - link "Predicci-n-de-cancelaciones-en-alojamientos-tur-sticos" [ref=f1e229] [cursor=pointer]:
+                      - /url: /DiegoRomanP/Predicci-n-de-cancelaciones-en-alojamientos-tur-sticos
+                    - generic [ref=f1e230]: Public
+                  - paragraph
+                  - paragraph [ref=f1e232]:
+                    - generic [ref=f1e233]: Jupyter Notebook
+              - listitem [ref=f1e235]:
+                - generic [ref=f1e237]:
+                  - generic [ref=f1e238]:
+                    - link "ProyectoFinal_MLE" [ref=f1e240] [cursor=pointer]:
+                      - /url: /DiegoRomanP/ProyectoFinal_MLE
+                    - generic [ref=f1e241]: Public
+                  - paragraph
+                  - paragraph [ref=f1e243]:
+                    - generic [ref=f1e244]: Jupyter Notebook
+              - listitem [ref=f1e246]:
+                - generic [ref=f1e248]:
+                  - generic [ref=f1e249]:
+                    - link "251CC232A-20221624A_PC1" [ref=f1e251] [cursor=pointer]:
+                      - /url: /DiegoRomanP/251CC232A-20221624A_PC1
+                    - generic [ref=f1e252]: Public
+                  - paragraph
+                  - paragraph [ref=f1e254]:
+                    - generic [ref=f1e255]: Java
+          - img "Loading" [ref=f1e261]
+  - contentinfo [ref=f1e264]:
+    - heading "Footer" [level=2] [ref=f1e265]
+    - generic [ref=f1e266]:
+      - generic [ref=f1e267]:
+        - link "GitHub Homepage" [ref=f1e268] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f1e271]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f1e272]:
+        - heading "Footer navigation" [level=3] [ref=f1e273]
+        - list "Footer navigation" [ref=f1e274]:
+          - listitem [ref=f1e275]:
+            - link "Terms" [ref=f1e276] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f1e277]:
+            - link "Privacy" [ref=f1e278] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f1e279]:
+            - link "Security" [ref=f1e280] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f1e281]:
+            - link "Status" [ref=f1e282] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f1e283]:
+            - link "Community" [ref=f1e284] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f1e285]:
+            - link "Docs" [ref=f1e286] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f1e287]:
+            - link "Contact" [ref=f1e288] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f1e289]:
+            - button "Manage cookies" [ref=f1e291] [cursor=pointer]
+          - listitem [ref=f1e292]:
+            - button "Do not share my personal information" [ref=f1e294] [cursor=pointer]

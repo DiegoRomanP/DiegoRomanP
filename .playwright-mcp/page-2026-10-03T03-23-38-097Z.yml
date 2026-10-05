@@ -1,0 +1,300 @@
+- generic [active] [ref=f1e1]:
+  - link "Saltar al contenido" [ref=f1e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "Diego Román, inicio" [ref=f1e5] [cursor=pointer]:
+        - /url: "#inicio"
+        - generic [aria-hidden] [ref=f1e6]: DR
+        - generic [ref=f1e7]:
+          - strong [ref=f1e8]: Diego Román
+          - generic [ref=f1e9]: Bitácora de proyectos
+      - navigation "Navegación principal" [ref=f1e10]:
+        - list [ref=f1e11]:
+          - listitem [ref=f1e12]:
+            - link "Proyectos" [ref=f1e13] [cursor=pointer]:
+              - /url: "#proyectos"
+          - listitem [ref=f1e14]:
+            - link "GitHub" [ref=f1e15] [cursor=pointer]:
+              - /url: "#github-stats"
+          - listitem [ref=f1e16]:
+            - link "Herramientas" [ref=f1e17] [cursor=pointer]:
+              - /url: "#herramientas"
+          - listitem [ref=f1e18]:
+            - link "Formación" [ref=f1e19] [cursor=pointer]:
+              - /url: "#formacion"
+      - generic [ref=f1e20]:
+        - generic [ref=f1e21]: UNI · 2022—
+        - group "Tema de color" [ref=f1e22]:
+          - button "Sistema" [pressed] [ref=f1e23] [cursor=pointer]
+          - button "Claro" [ref=f1e24] [cursor=pointer]
+          - button "Oscuro" [ref=f1e25] [cursor=pointer]
+  - main [ref=f1e26]:
+    - region [ref=f1e27]:
+      - paragraph [ref=f1e28]:
+        - generic [ref=f1e29]: 01 / PERFIL
+        - text: Estudiante de Ciencia de la Computación · UNI
+      - generic [ref=f1e30]:
+        - generic [ref=f1e31]:
+          - heading "Diego Román" [level=1] [ref=f1e32]: Diego Román.
+          - paragraph [ref=f1e33]: "Estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería (UNI) desde 2022. En mis proyectos exploro aplicaciones full stack con IA aplicada: investigación documental con citas, planificación de estudio, herramientas de IA para notas y experimentos de machine learning. Cuando una respuesta se apoya en documentos, me importa que sus fuentes se puedan revisar."
+          - generic [ref=f1e34]:
+            - link "Ver proyectos" [ref=f1e35] [cursor=pointer]:
+              - /url: "#proyectos"
+              - text: Ver proyectos
+              - generic [aria-hidden] [ref=f1e36]: ↓
+            - link "GitHub" [ref=f1e37] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP
+              - text: GitHub ↗
+        - complementary "Temas de los proyectos" [ref=f1e38]:
+          - paragraph [ref=f1e39]: Pistas / temas
+          - list [ref=f1e40]:
+            - listitem [ref=f1e41]:
+              - generic [ref=f1e42]: "01"
+              - text: Fuentes que se pueden revisar
+            - listitem [ref=f1e43]:
+              - generic [ref=f1e44]: "02"
+              - text: Planificación de estudio
+            - listitem [ref=f1e45]:
+              - generic [ref=f1e46]: "03"
+              - text: IA aplicada y experimentos
+          - paragraph [ref=f1e47]: Prototipos y herramientas descritos por su alcance.
+      - generic [aria-hidden] [ref=f1e48]:
+        - generic [ref=f1e50]: BITÁCORA DE PROYECTOS
+        - generic [ref=f1e51]: 2022—
+        - generic [ref=f1e52]: UNI
+    - region [ref=f1e53]:
+      - generic [ref=f1e54]:
+        - paragraph [ref=f1e55]: Selección / 04 proyectos
+        - heading "Ideas en distintas escalas." [level=2] [ref=f1e56]
+        - paragraph [ref=f1e57]: Investigación documental, organización del estudio, herramientas para notas y una prueba de clasificación.
+      - generic [ref=f1e58]:
+        - article [ref=f1e59]:
+          - generic [ref=f1e60]:
+            - generic [ref=f1e61]:
+              - generic [ref=f1e62]: "01"
+              - generic [ref=f1e63]: Investigación documental
+            - heading [level=3] [ref=f1e64]:
+              - link "LexiTrace — Evidencia documental con RAG" [ref=f1e65] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP/lexitrace-legal-evidence-rag
+            - paragraph [ref=f1e66]: MVP local para investigar PDFs seleccionados y consultar respuestas con citas al documento, página y fragmento. No ofrece asesoría legal.
+            - generic [ref=f1e67]:
+              - generic [ref=f1e68]:
+                - term [ref=f1e69]: Propósito
+                - definition [ref=f1e70]: Explorar cómo las respuestas sobre documentos pueden dejar visibles sus fuentes.
+              - generic [ref=f1e71]:
+                - term [ref=f1e72]: Alcance
+                - definition [ref=f1e73]: PDFs seleccionados · citas a documento, página y fragmento · no es asesoría legal.
+            - paragraph [ref=f1e74]:
+              - generic [ref=f1e75]: Stack
+              - text: FastAPI · React · TypeScript · SQLite · Qdrant
+          - figure "Esquema funcional · no es una captura de la aplicación" [ref=f1e76]:
+            - 'img "Esquema funcional de LexiTrace: un PDF seleccionado alimenta una consulta y una respuesta con citas al documento, página y fragmento" [ref=f1e78]'
+        - article [ref=f1e80]:
+          - paragraph [ref=f1e81]: 02 / 04
+          - generic [ref=f1e82]:
+            - paragraph [ref=f1e83]: Aprendizaje · estudio
+            - heading [level=3] [ref=f1e84]:
+              - link "StudyAI — Planificación y repaso de estudio" [ref=f1e85] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP/StudyAI
+            - paragraph [ref=f1e86]: Organiza planes desde documentos y metas en sesiones, materiales y cuestionarios, con repaso espaciado SM-2. El LLM simulado se usa por defecto; el RAG semántico es opcional.
+          - generic [ref=f1e87]:
+            - paragraph [ref=f1e88]:
+              - strong [ref=f1e89]: Propósito
+              - text: Convertir objetivos y material de estudio en una planificación por sesiones.
+            - paragraph [ref=f1e90]:
+              - strong [ref=f1e91]: Alcance
+              - text: Documentos y metas · materiales y cuestionarios · repaso SM-2 · LLM simulado por defecto, RAG opcional.
+            - paragraph [ref=f1e92]:
+              - strong [ref=f1e93]: Stack
+              - text: FastAPI · React · TypeScript
+        - generic [ref=f1e94]:
+          - article [ref=f1e95]:
+            - generic [ref=f1e96]:
+              - generic [ref=f1e97]: "03"
+              - generic [ref=f1e98]: Plugin · notas
+            - heading [level=3] [ref=f1e99]:
+              - link "Context IA Obsidian" [ref=f1e100] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP/context-ia-obsidian
+            - paragraph [ref=f1e101]: Plugin TypeScript para resumir o explicar notas, investigar con fuentes y generar imágenes.
+            - paragraph [ref=f1e102]:
+              - strong [ref=f1e103]: Alcance
+              - text: Resumir y explicar notas · investigar con fuentes · generar imágenes.
+            - paragraph [ref=f1e104]:
+              - generic [ref=f1e105]: Stack
+              - text: TypeScript
+            - paragraph [ref=f1e106]:
+              - link "Release v0.1.0" [ref=f1e107] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP/context-ia-obsidian/releases/tag/v0.1.0
+                - text: Release v0.1.0 ↗
+          - article [ref=f1e108]:
+            - generic [ref=f1e109]:
+              - generic [ref=f1e110]: "04"
+              - generic [ref=f1e111]: Machine learning · clasificación
+            - heading [level=3] [ref=f1e112]:
+              - link "Give me some Credit" [ref=f1e113] [cursor=pointer]:
+                - /url: https://github.com/DiegoRomanP/Give-me-some-Credit
+            - paragraph [ref=f1e114]: Experimento de predicción crediticia con XGBoost que compara métodos de balanceo.
+            - paragraph [ref=f1e115]:
+              - strong [ref=f1e116]: Alcance
+              - text: XGBoost · comparación de métodos de balanceo · API FastAPI e interfaz Streamlit.
+            - paragraph [ref=f1e117]:
+              - generic [ref=f1e118]: Stack
+              - text: XGBoost · FastAPI · Streamlit · Docker
+    - region [ref=f1e119]:
+      - generic [ref=f1e120]:
+        - paragraph [ref=f1e121]: Trazas públicas / GitHub
+        - heading "Cifras con fuente y definición." [level=2] [ref=f1e122]
+        - paragraph [ref=f1e123]: Una lectura acotada de lo que GitHub muestra públicamente; no mide actividad privada, commits de por vida ni experiencia.
+      - generic [ref=f1e124]:
+        - generic [ref=f1e125]:
+          - generic [ref=f1e126]:
+            - term [ref=f1e127]:
+              - text: Repositorios propios públicos
+              - generic [ref=f1e128]: (sin forks)
+            - definition [ref=f1e129]: "23"
+          - generic [ref=f1e130]:
+            - term [ref=f1e131]: Estrellas en esos repositorios
+            - definition [ref=f1e132]: "1"
+          - generic [ref=f1e133]:
+            - term [ref=f1e134]: Seguidores de la cuenta
+            - definition [ref=f1e135]: "6"
+        - generic [ref=f1e136]:
+          - img "Gráfico de barras con el conteo de lenguajes principales declarados por repositorio público propio" [ref=f1e137]
+          - list "Conteo textual de repositorios por lenguaje principal" [ref=f1e138]:
+            - listitem [ref=f1e139]:
+              - generic [ref=f1e140]: Jupyter Notebook
+              - strong [ref=f1e141]: 8 repositorios
+            - listitem [ref=f1e142]:
+              - generic [ref=f1e143]: Python
+              - strong [ref=f1e144]: 7 repositorios
+            - listitem [ref=f1e145]:
+              - generic [ref=f1e146]: Shell
+              - strong [ref=f1e147]: 2 repositorios
+            - listitem [ref=f1e148]:
+              - generic [ref=f1e149]: TypeScript
+              - strong [ref=f1e150]: 2 repositorios
+            - listitem [ref=f1e151]:
+              - generic [ref=f1e152]: Otros lenguajes
+              - strong [ref=f1e153]: 3 repositorios
+          - paragraph [ref=f1e154]:
+            - text: El campo
+            - code [ref=f1e155]: language
+            - text: de GitHub representa el lenguaje principal del repositorio, no sus bytes ni un nivel de dominio. Los repositorios sin lenguaje declarado se excluyen.
+      - paragraph [ref=f1e156]:
+        - text: "Snapshot:"
+        - time [ref=f1e157]: 2026-10-03 03:16 UTC
+        - text: "· Fuentes:"
+        - link "perfil público" [ref=f1e158] [cursor=pointer]:
+          - /url: https://api.github.com/users/DiegoRomanP
+        - text: "y"
+        - link "lista de repositorios" [ref=f1e159] [cursor=pointer]:
+          - /url: https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100
+        - text: de la API de GitHub.
+    - region [ref=f1e160]:
+      - generic [ref=f1e161]:
+        - paragraph [ref=f1e162]: Con qué construyo
+        - heading "Herramientas por función." [level=2] [ref=f1e163]
+        - paragraph [ref=f1e164]: La lista refleja tecnologías que aparecen en los cuatro repositorios seleccionados; no es una escala de dominio.
+      - generic [ref=f1e165]:
+        - article [ref=f1e166]:
+          - paragraph [ref=f1e167]: "01"
+          - generic [ref=f1e168]:
+            - heading "APIs y backend" [level=3] [ref=f1e169]
+            - list [ref=f1e170]:
+              - listitem [ref=f1e171]: Python
+              - listitem [ref=f1e172]: FastAPI
+        - article [ref=f1e173]:
+          - paragraph [ref=f1e174]: "02"
+          - generic [ref=f1e175]:
+            - heading "Interfaces" [level=3] [ref=f1e176]
+            - list [ref=f1e177]:
+              - listitem [ref=f1e178]: React
+              - listitem [ref=f1e179]: TypeScript
+              - listitem [ref=f1e180]: Streamlit
+        - article [ref=f1e181]:
+          - paragraph [ref=f1e182]: "03"
+          - generic [ref=f1e183]:
+            - heading "Datos e IA aplicada" [level=3] [ref=f1e184]
+            - list [ref=f1e185]:
+              - listitem [ref=f1e186]: RAG
+              - listitem [ref=f1e187]: SQLite
+              - listitem [ref=f1e188]: Qdrant
+              - listitem [ref=f1e189]: XGBoost
+        - article [ref=f1e190]:
+          - paragraph [ref=f1e191]: "04"
+          - generic [ref=f1e192]:
+            - heading "Herramientas e integración" [level=3] [ref=f1e193]
+            - list [ref=f1e194]:
+              - listitem [ref=f1e195]: Obsidian
+              - listitem [ref=f1e196]: Docker
+    - region [ref=f1e197]:
+      - generic [ref=f1e198]:
+        - paragraph [ref=f1e199]: Formación / aprendizaje
+        - heading "Una base en construcción." [level=2] [ref=f1e200]
+        - paragraph [ref=f1e201]: Estudios de pregrado, formación complementaria e idiomas.
+      - generic [ref=f1e202]:
+        - article [ref=f1e203]:
+          - paragraph [ref=f1e204]: 01 / ACADÉMICA
+          - heading "Ciencia de la Computación" [level=3] [ref=f1e205]
+          - paragraph [ref=f1e206]: Universidad Nacional de Ingeniería (UNI)
+          - paragraph [ref=f1e207]: Estudiante de pregrado · 2022–presente
+          - heading "Cursos relacionados" [level=4] [ref=f1e208]
+          - list [ref=f1e209]:
+            - listitem [ref=f1e210]: Estructuras de Datos
+            - listitem [ref=f1e211]: Base de Datos
+            - listitem [ref=f1e212]: Ingeniería de Software
+            - listitem [ref=f1e213]: Sistemas Operativos
+        - generic [ref=f1e214]:
+          - article [ref=f1e215]:
+            - paragraph [ref=f1e216]: 02 / COMPLEMENTARIA
+            - heading "Formación complementaria" [level=3] [ref=f1e217]
+            - list [ref=f1e218]:
+              - listitem [ref=f1e219]:
+                - strong [ref=f1e220]: Diplomado en Ciencia de Datos Avanzada
+                - generic [ref=f1e221]: Data Mining Consulting · 2025
+              - listitem [ref=f1e222]:
+                - strong [ref=f1e223]: AI Foundations Associate
+                - generic [ref=f1e224]: Oracle University · 2025
+              - listitem [ref=f1e225]:
+                - strong [ref=f1e226]: Claude Code in Action
+                - generic [ref=f1e227]: Anthropic · 2026
+              - listitem [ref=f1e228]:
+                - strong [ref=f1e229]: Claude Code 101
+                - generic [ref=f1e230]: Anthropic
+          - article [ref=f1e231]:
+            - paragraph [ref=f1e232]: 03 / IDIOMAS
+            - heading "Lenguas" [level=3] [ref=f1e233]
+            - list [ref=f1e234]:
+              - listitem [ref=f1e235]:
+                - strong [ref=f1e236]: Español
+                - text: · nativo
+              - listitem [ref=f1e237]:
+                - strong [ref=f1e238]: Inglés
+                - text: · avanzado (C1) · formación en ICPNA
+    - region [ref=f1e239]:
+      - paragraph [ref=f1e240]: Gracias por llegar hasta aquí
+      - heading "¿Vemos el código?" [level=2] [ref=f1e241]
+      - paragraph [ref=f1e242]: Los repositorios públicos reúnen el alcance y los detalles de cada proyecto.
+      - link "Explorar repositorios" [ref=f1e243] [cursor=pointer]:
+        - /url: https://github.com/DiegoRomanP?tab=repositories
+        - text: Explorar repositorios
+        - generic [aria-hidden] [ref=f1e244]: ↗
+  - contentinfo [ref=f1e245]:
+    - generic [ref=f1e246]:
+      - generic [ref=f1e247]:
+        - paragraph [ref=f1e248]: Seguimos la conversación.
+        - paragraph [ref=f1e249]: Código, proyectos y formación en los enlaces públicos.
+      - navigation "Enlaces profesionales" [ref=f1e250]:
+        - link "GitHub" [ref=f1e251] [cursor=pointer]:
+          - /url: https://github.com/DiegoRomanP
+          - text: GitHub ↗
+        - link "LinkedIn" [ref=f1e252] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/diego-osvaldo-roman-palomino/
+          - text: LinkedIn ↗
+        - link "Repositorios" [ref=f1e253] [cursor=pointer]:
+          - /url: https://github.com/DiegoRomanP?tab=repositories
+          - text: Repositorios ↗
+      - paragraph [ref=f1e254]:
+        - text: Build local/CI · revisión
+        - code [ref=f1e255]: 1f62a13825616dba195de4ef2601a365bfbad16a

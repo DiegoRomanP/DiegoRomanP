@@ -1,0 +1,10 @@
+[    1437ms] TypeError: e.d3AlphaTarget is not a function
+    at https://jorgemunozl.github.io/assets/GlobalGraphView-CXuVFKS0.js:6:18334
+[    1736ms] TypeError: e.d3AlphaTarget is not a function
+    at https://jorgemunozl.github.io/assets/GlobalGraphView-CXuVFKS0.js:6:18806
+[    5854ms] TypeError: e.d3AlphaTarget is not a function
+    at Object.onEngineStop (https://jorgemunozl.github.io/assets/GlobalGraphView-CXuVFKS0.js:6:27476)
+    at r (https://jorgemunozl.github.io/assets/vendor-graph-CzB-yCkM.js:46:6499)
+    at M.tickFrame (https://jorgemunozl.github.io/assets/vendor-graph-CzB-yCkM.js:46:6273)
+    at M.<computed> [as tickFrame] (https://jorgemunozl.github.io/assets/vendor-graph-CzB-yCkM.js:6:1813)
+    at h (https://jorgemunozl.github.io/assets/vendor-graph-CzB-yCkM.js:46:25249)

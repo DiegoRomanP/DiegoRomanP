@@ -1,0 +1,152 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Diego Román, inicio" [ref=e5] [cursor=pointer]:
+        - /url: "#inicio"
+        - generic [aria-hidden] [ref=e6]: DR
+        - generic [ref=e7]:
+          - text: Diego Román
+          - generic [ref=e8]: Bitácora de laboratorio
+      - navigation "Navegación principal" [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "Proyectos" [ref=e12] [cursor=pointer]:
+              - /url: "#proyectos"
+          - listitem [ref=e13]:
+            - link "Formación" [ref=e14] [cursor=pointer]:
+              - /url: "#formacion"
+          - listitem [ref=e15]:
+            - link "Tecnologías" [ref=e16] [cursor=pointer]:
+              - /url: "#tecnologias"
+          - listitem [ref=e17]:
+            - link "GitHub" [ref=e18] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP
+  - main [ref=e19]:
+    - region [ref=e20]:
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: Bitácora de laboratorio / Ciencia de la Computación
+        - heading "Hola, soy Diego Román" [level=1] [ref=e23]
+        - paragraph [ref=e24]: "Estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería (UNI) desde 2022. Me enfoco en construir aplicaciones full stack con IA aplicada: en mis proyectos combino interfaces, APIs y datos con flujos RAG y modelos predictivos, procurando que las respuestas puedan revisarse."
+        - generic [ref=e25]:
+          - link "Ver proyectos" [ref=e26] [cursor=pointer]:
+            - /url: "#proyectos"
+          - link "Explorar repositorios" [ref=e27] [cursor=pointer]:
+            - /url: https://github.com/DiegoRomanP?tab=repositories
+      - img "Ilustración abstracta de rutas de datos que conectan nodos de un laboratorio digital" [ref=e29]
+    - region [ref=e30]:
+      - generic [ref=e31]:
+        - paragraph [ref=e32]: Selección de repositorios
+        - heading "Proyectos destacados" [level=2] [ref=e33]
+        - paragraph [ref=e34]: Prototipos y herramientas para explorar cómo los datos y los modelos pueden convertirse en experiencias revisables.
+      - generic [ref=e35]:
+        - article [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: "01"
+            - generic [ref=e39]: RAG · investigación documental
+          - heading [level=3] [ref=e40]:
+            - link "LexiTrace — evidencia documental con RAG" [ref=e41] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP/lexitrace-legal-evidence-rag
+          - paragraph [ref=e42]: MVP local para investigar PDFs seleccionados y consultar respuestas con citas al documento, página y fragmento. No ofrece asesoría legal.
+          - list "Tecnologías de LexiTrace" [ref=e43]:
+            - listitem [ref=e44]: FastAPI
+            - listitem [ref=e45]: React
+            - listitem [ref=e46]: TypeScript
+            - listitem [ref=e47]: SQLite
+            - listitem [ref=e48]: Qdrant
+        - article [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: "02"
+            - generic [ref=e52]: Aprendizaje · estudio
+          - heading [level=3] [ref=e53]:
+            - link "StudyAI" [ref=e54] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP/StudyAI
+          - paragraph [ref=e55]: Crea planes de estudio a partir de documentos y metas, con sesiones, materiales, cuestionarios y repaso espaciado SM-2. El LLM simulado está activo por defecto; el RAG semántico es opcional.
+          - list "Tecnologías de StudyAI" [ref=e56]:
+            - listitem [ref=e57]: FastAPI
+            - listitem [ref=e58]: React
+            - listitem [ref=e59]: TypeScript
+        - article [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]: "03"
+            - generic [ref=e63]: Plugin · notas
+          - heading [level=3] [ref=e64]:
+            - link "Context IA Obsidian" [ref=e65] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP/context-ia-obsidian
+          - paragraph [ref=e66]: Plugin con acciones de IA para resumir o explicar notas, investigar con fuentes y generar imágenes.
+          - paragraph [ref=e67]:
+            - link "Ver release v0.1.0" [ref=e68] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP/context-ia-obsidian/releases/tag/v0.1.0
+              - text: Ver release v0.1.0 ↗
+          - list "Tecnologías de Context IA Obsidian" [ref=e69]:
+            - listitem [ref=e70]: TypeScript
+        - article [ref=e71]:
+          - generic [ref=e72]:
+            - generic [ref=e73]: "04"
+            - generic [ref=e74]: ML · predicción crediticia
+          - heading [level=3] [ref=e75]:
+            - link "Give me some Credit" [ref=e76] [cursor=pointer]:
+              - /url: https://github.com/DiegoRomanP/Give-me-some-Credit
+          - paragraph [ref=e77]: Experimento de predicción crediticia con XGBoost que compara métodos de balanceo.
+          - list "Tecnologías de Give me some Credit" [ref=e78]:
+            - listitem [ref=e79]: FastAPI
+            - listitem [ref=e80]: Streamlit
+            - listitem [ref=e81]: Docker
+    - region [ref=e82]:
+      - generic [ref=e83]:
+        - paragraph [ref=e84]: Formación
+        - heading "Formación" [level=2] [ref=e85]
+        - paragraph [ref=e86]: Estudios académicos, aprendizaje complementario e idiomas.
+      - generic [ref=e87]:
+        - article [ref=e88]:
+          - heading "Formación académica" [level=3] [ref=e89]
+          - paragraph [ref=e90]:
+            - strong [ref=e91]: Ciencia de la Computación — Universidad Nacional de Ingeniería (UNI)
+          - paragraph [ref=e92]: Estudiante de pregrado · 2022–presente
+          - heading "Cursos" [level=4] [ref=e93]
+          - list [ref=e94]:
+            - listitem [ref=e95]: Estructuras de Datos
+            - listitem [ref=e96]: Base de Datos
+            - listitem [ref=e97]: Ingeniería de Software
+            - listitem [ref=e98]: Sistemas Operativos
+        - article [ref=e99]:
+          - heading "Formación complementaria" [level=3] [ref=e100]
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - strong [ref=e103]: Diplomado en Ciencia de Datos Avanzada
+              - generic [ref=e104]: Data Mining Consulting · 2025
+            - listitem [ref=e105]:
+              - strong [ref=e106]: AI Foundations Associate
+              - generic [ref=e107]: Oracle University · 2025
+            - listitem [ref=e108]:
+              - strong [ref=e109]: Claude Code in Action (2026)
+              - generic [ref=e110]: Anthropic
+            - listitem [ref=e111]:
+              - strong [ref=e112]: Claude Code 101
+              - generic [ref=e113]: Anthropic
+      - paragraph [ref=e114]:
+        - strong [ref=e115]: "Idiomas:"
+        - text: Español nativo · inglés avanzado (C1), formación en ICPNA.
+    - region [ref=e116]:
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: Herramientas en mis proyectos
+        - heading "Tecnologías" [level=2] [ref=e119]
+        - paragraph [ref=e120]: Un conjunto breve de tecnologías presentes en los repositorios destacados.
+      - list "Tecnologías destacadas" [ref=e121]:
+        - listitem [ref=e122]:
+          - img "Python" [ref=e123]
+        - listitem [ref=e124]:
+          - img "FastAPI" [ref=e125]
+        - listitem [ref=e126]:
+          - img "React" [ref=e127]
+        - listitem [ref=e128]:
+          - img "TypeScript" [ref=e129]
+  - contentinfo [ref=e130]:
+    - generic [ref=e131]:
+      - paragraph [ref=e132]: Explora el código y más proyectos en mis repositorios públicos.
+      - navigation "Enlaces profesionales" [ref=e133]:
+        - link "LinkedIn" [ref=e134] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/diego-osvaldo-roman-palomino/
+        - link "GitHub" [ref=e135] [cursor=pointer]:
+          - /url: https://github.com/DiegoRomanP

@@ -1,0 +1,870 @@
+---
+import profile from "../../data/profile.json";
+import "../styles/global.css";
+
+const baseUrl = import.meta.env.BASE_URL;
+const canonicalUrl = new URL(
+  `${baseUrl.replace(/^\/+/, "")}landing-preview/`,
+  Astro.site ?? new URL("https://diegoromanp.github.io"),
+).toString();
+---
+
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#101417" />
+    <meta
+      name="description"
+      content="Proyectos de Diego Román: IA aplicada, herramientas de estudio y experimentos con fuentes y alcances visibles."
+    />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}assets/favicon.svg`} />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{profile.name} — Ideas para explorar</title>
+  </head>
+  <body class="landing-preview">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href={baseUrl} aria-label={`${profile.name}, volver a la portada`}>
+          <span class="brand-mark" aria-hidden="true">DR</span>
+          <span class="brand-copy">
+            <strong>{profile.name}</strong>
+            <span>PORTAFOLIO / COMPUTACIÓN</span>
+          </span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navegación principal">
+          <a href="#enfoque">Enfoque</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a class="header-link" href={profile.links.github}>
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </header>
+
+      <main id="contenido">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>{profile.headline}</p>
+            <h1 id="hero-title">Ideas claras.<br /><span>Proyectos para explorar.</span></h1>
+            <p class="hero-intro">
+              Soy {profile.name}, estudiante de Ciencia de la Computación en la UNI. Exploro IA aplicada,
+              RAG y machine learning con una regla simple: mostrar qué hace cada proyecto —y hasta
+              dónde llega.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#proyectos">
+                Explorar proyectos <span aria-hidden="true">↓</span>
+              </a>
+              <a class="button button-quiet" href={profile.links.github}>
+                Ver GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Temas que exploro">
+            <div class="panel-topline">
+              <span>EN FOCO</span>
+              <span>01—04</span>
+            </div>
+            <p class="panel-title">Tecnología con preguntas concretas.</p>
+            <ul class="interest-list">
+              <li><span>01</span><span>Fuentes que se pueden revisar</span></li>
+              <li><span>02</span><span>Herramientas que ayudan a aprender</span></li>
+              <li><span>03</span><span>Experimentos de IA aplicada</span></li>
+            </ul>
+            <p class="panel-foot">Prototipos y herramientas descritos por su alcance.</p>
+            <span class="panel-orbit orbit-one" aria-hidden="true"></span>
+            <span class="panel-orbit orbit-two" aria-hidden="true"></span>
+          </aside>
+
+          <div class="hero-baseline" aria-hidden="true">
+            <span>DISEÑAR</span><span class="baseline-rule"></span><span>CONSTRUIR</span>
+            <span class="baseline-rule"></span><span>EXPLORAR</span>
+          </div>
+        </section>
+
+        <section id="enfoque" class="section focus-section" aria-labelledby="focus-title">
+          <div class="section-heading">
+            <p class="eyebrow">01 / ENFOQUE</p>
+            <div>
+              <h2 id="focus-title">Preguntas que llevo al código.</h2>
+              <p>Menos promesas generales. Más proyectos concretos, con sus decisiones y límites a la vista.</p>
+            </div>
+          </div>
+
+          <div class="focus-grid">
+            <article class="focus-card">
+              <p class="card-index">01 — EVIDENCIA</p>
+              <h3>Respuestas que muestran sus fuentes.</h3>
+              <p>LexiTrace explora citas a documento, página y fragmento al consultar PDFs seleccionados.</p>
+              <a href="#proyecto-lexitrace">Conocer LexiTrace <span aria-hidden="true">↓</span></a>
+            </article>
+            <article class="focus-card">
+              <p class="card-index">02 — APRENDIZAJE</p>
+              <h3>Objetivos convertidos en pasos.</h3>
+              <p>StudyAI organiza metas y material en sesiones, cuestionarios y repaso espaciado.</p>
+              <a href="#proyecto-studyai">Conocer StudyAI <span aria-hidden="true">↓</span></a>
+            </article>
+            <article class="focus-card">
+              <p class="card-index">03 — HERRAMIENTAS</p>
+              <h3>IA dentro del flujo de trabajo.</h3>
+              <p>Un plugin para Obsidian reúne acciones para resumir, explicar e investigar con fuentes.</p>
+              <a href="#proyecto-contextia">Ver el plugin <span aria-hidden="true">↓</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section id="proyectos" class="section projects-section" aria-labelledby="projects-title">
+          <div class="section-heading projects-heading">
+            <p class="eyebrow">02 / TRABAJO SELECCIONADO</p>
+            <div>
+              <h2 id="projects-title">Cuatro formas de poner una idea a prueba.</h2>
+              <p>Explorá el código, revisá el alcance y decidí qué querés probar primero.</p>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            {profile.projects.map((project) => (
+              <article
+                id={`proyecto-${project.id}`}
+                class={`project-card${project.id === "lexitrace" ? " project-card-featured" : ""}`}
+              >
+                <div class="project-copy">
+                  <p class="card-index">{project.number} <span>/ {project.category}</span></p>
+                  <h3>{project.name}</h3>
+                  <p class="project-descriptor">{project.descriptor}</p>
+                  <p class="project-summary">{project.summary}</p>
+                  <p class="project-scope"><strong>Alcance</strong>{project.scope}</p>
+                  <ul class="tag-list" aria-label={`Tecnologías de ${project.name}`}>
+                    {project.stack.map((technology) => <li>{technology}</li>)}
+                  </ul>
+                  <a class="project-link" href={project.url}>
+                    Explorar en GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                {project.id === "lexitrace" && (
+                  <figure class="project-visual">
+                    <img
+                      src={`${baseUrl}assets/lexitrace-flow.svg`}
+                      width="760"
+                      height="322"
+                      alt="Esquema de LexiTrace: un PDF, una consulta y una respuesta con citas al documento, página y fragmento"
+                      loading="lazy"
+                    />
+                    <figcaption>Una consulta. Fuentes visibles.</figcaption>
+                  </figure>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+          <div>
+            <p class="eyebrow">03 / SIGUIENTE PASO</p>
+            <h2 id="contact-title">¿Tenés una idea<br />para poner a prueba?</h2>
+            <p>Si te interesan la IA aplicada, las herramientas de estudio o la evidencia documental, hablemos.</p>
+          </div>
+          <a class="button button-primary contact-link" href={profile.links.linkedin}>
+            Conectar en LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="footer-brand" href={baseUrl}>{profile.name}</a>
+        <p>Proyectos con alcance visible. Código abierto a explorar.</p>
+        <a class="footer-home" href={baseUrl}>Portada actual <span aria-hidden="true">↗</span></a>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  :global(body.landing-preview) {
+    min-width: 320px;
+    background:
+      radial-gradient(ellipse at 80% 12%, rgb(121 216 193 / 7%), transparent 30rem),
+      var(--page);
+  }
+
+  .page-shell {
+    width: min(calc(100% - 3rem), 1280px);
+    margin-inline: auto;
+  }
+
+  .topbar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 5.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand {
+    display: inline-flex;
+    min-width: max-content;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .brand:hover,
+  .footer-brand:hover {
+    color: var(--ink);
+  }
+
+  .brand-mark {
+    display: grid;
+    width: 2.6rem;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface-alt);
+    color: var(--accent-strong);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    letter-spacing: -0.06em;
+  }
+
+  .brand-copy {
+    display: grid;
+    gap: 0.12rem;
+    line-height: 1.2;
+  }
+
+  .brand-copy strong {
+    font-size: 0.92rem;
+    font-weight: 680;
+  }
+
+  .brand-copy > span,
+  .eyebrow,
+  .card-index,
+  .panel-topline,
+  .hero-baseline,
+  .project-scope strong {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .brand-copy > span {
+    color: var(--quiet);
+  }
+
+  .primary-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem clamp(0.8rem, 2.3vw, 2rem);
+  }
+
+  .primary-nav a,
+  .header-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.83rem;
+    font-weight: 620;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.3rem;
+  }
+
+  .primary-nav a:hover,
+  .header-link:hover {
+    color: var(--accent-strong);
+    text-decoration-color: currentColor;
+  }
+
+  .header-link {
+    gap: 0.45rem;
+    color: var(--ink);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.8fr);
+    align-items: center;
+    gap: 2rem clamp(2.5rem, 8vw, 8rem);
+    padding-block: clamp(4.5rem, 10vw, 8.5rem) 2.2rem;
+  }
+
+  .hero-copy {
+    max-width: 52rem;
+  }
+
+  .eyebrow {
+    color: var(--accent-strong);
+    line-height: 1.6;
+    text-transform: uppercase;
+  }
+
+  .hero-copy > .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2.4rem);
+  }
+
+  .live-dot {
+    width: 0.48rem;
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0.3rem rgb(121 216 193 / 12%);
+  }
+
+  .hero h1 {
+    max-width: 11ch;
+    font-size: clamp(3.4rem, 8.3vw, 7.2rem);
+    font-weight: 640;
+    letter-spacing: -0.085em;
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .hero h1 span {
+    color: var(--accent);
+  }
+
+  .hero-intro {
+    max-width: 43rem;
+    margin-top: clamp(1.5rem, 3vw, 2.3rem);
+    color: var(--muted);
+    font-size: clamp(1rem, 1.5vw, 1.17rem);
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 1.9rem;
+  }
+
+  .button {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.7rem 1.05rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.88rem;
+    font-weight: 680;
+    text-align: center;
+    text-decoration: none;
+    transition: transform var(--motion-fast) var(--ease-out), background-color var(--motion-fast) ease,
+      border-color var(--motion-fast) ease, color var(--motion-fast) ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-primary {
+    background: var(--accent-strong);
+    color: var(--page);
+  }
+
+  .button-primary:hover {
+    background: var(--accent);
+    color: var(--page);
+  }
+
+  .button-quiet {
+    border-color: var(--line);
+    color: var(--ink);
+  }
+
+  .button-quiet:hover {
+    border-color: var(--accent);
+    color: var(--accent-strong);
+  }
+
+  .hero-panel {
+    position: relative;
+    isolation: isolate;
+    min-height: 20rem;
+    overflow: hidden;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: 0.35rem;
+    background: linear-gradient(145deg, rgb(28 36 37 / 92%), rgb(18 24 25 / 94%));
+    box-shadow: var(--shadow);
+  }
+
+  .panel-topline {
+    display: flex;
+    justify-content: space-between;
+    color: var(--quiet);
+  }
+
+  .panel-title {
+    position: relative;
+    z-index: 1;
+    max-width: 13ch;
+    margin-top: 2.7rem;
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 610;
+    letter-spacing: -0.06em;
+    line-height: 1.12;
+  }
+
+  .interest-list {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 0.85rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .interest-list li {
+    display: grid;
+    grid-template-columns: 1.7rem 1fr;
+    gap: 0.55rem;
+    color: var(--muted);
+    font-size: 0.83rem;
+    line-height: 1.45;
+  }
+
+  .interest-list li span:first-child {
+    color: var(--accent-strong);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+  }
+
+  .panel-foot {
+    position: relative;
+    z-index: 1;
+    margin-top: 1.35rem;
+    color: var(--quiet);
+    font-size: 0.75rem;
+  }
+
+  .panel-orbit {
+    position: absolute;
+    z-index: -1;
+    width: 14rem;
+    aspect-ratio: 1;
+    border: 1px solid rgb(121 216 193 / 13%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .orbit-one {
+    top: -8rem;
+    right: -5rem;
+  }
+
+  .orbit-two {
+    top: -5rem;
+    right: -2rem;
+  }
+
+  .hero-baseline {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    gap: clamp(0.7rem, 1.7vw, 1.4rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--quiet);
+  }
+
+  .baseline-rule {
+    height: 1px;
+    flex: 1 1 3rem;
+    background: var(--line);
+  }
+
+  .section {
+    padding-block: clamp(4.5rem, 8vw, 7.25rem);
+    border-top: 1px solid var(--line);
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.36fr) minmax(0, 1fr);
+    gap: 1.5rem 3rem;
+    align-items: start;
+    margin-bottom: clamp(2rem, 5vw, 3.8rem);
+  }
+
+  .section-heading > .eyebrow {
+    padding-top: 0.5rem;
+  }
+
+  .section-heading h2,
+  .contact-section h2 {
+    max-width: 19ch;
+    font-size: clamp(2.3rem, 5.4vw, 4.5rem);
+    font-weight: 610;
+    letter-spacing: -0.07em;
+    line-height: 1.04;
+  }
+
+  .section-heading > div > p:last-child {
+    max-width: 44rem;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid var(--line);
+  }
+
+  .focus-card {
+    min-width: 0;
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    background: var(--surface);
+  }
+
+  .focus-card + .focus-card {
+    border-left: 1px solid var(--line);
+  }
+
+  .card-index {
+    color: var(--accent-strong);
+    text-transform: uppercase;
+  }
+
+  .focus-card h3 {
+    max-width: 16ch;
+    margin-top: 2.8rem;
+    font-size: clamp(1.3rem, 2.1vw, 1.75rem);
+    font-weight: 620;
+    letter-spacing: -0.045em;
+  }
+
+  .focus-card > p:not(.card-index) {
+    min-height: 6.3rem;
+    margin-top: 0.9rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+
+  .focus-card > a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
+    color: var(--accent-strong);
+    font-size: 0.8rem;
+    font-weight: 680;
+    text-decoration-color: transparent;
+  }
+
+  .focus-card > a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .projects-section {
+    border-top: 1px solid var(--line);
+  }
+
+  .projects-heading h2 {
+    max-width: 16ch;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: 0.3rem;
+    background: var(--surface);
+  }
+
+  .project-card-featured {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.9fr);
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(120deg, var(--surface), var(--surface-alt));
+  }
+
+  .card-index span {
+    color: var(--quiet);
+  }
+
+  .project-card h3 {
+    margin-top: 1.2rem;
+    font-size: clamp(1.7rem, 3.4vw, 2.65rem);
+    font-weight: 620;
+    letter-spacing: -0.06em;
+  }
+
+  .project-descriptor {
+    margin-top: 0.35rem;
+    color: var(--accent-strong);
+    font-size: 0.83rem;
+    font-weight: 630;
+  }
+
+  .project-summary {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .project-scope {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.79rem;
+  }
+
+  .project-scope strong {
+    color: var(--quiet);
+    font-weight: 650;
+    text-transform: uppercase;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    padding: 0.25rem 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--quiet);
+    font-size: 0.68rem;
+    line-height: 1.4;
+  }
+
+  .project-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.45rem;
+    align-self: flex-start;
+    margin-top: 1rem;
+    color: var(--accent-strong);
+    font-size: 0.82rem;
+    font-weight: 680;
+    text-decoration-color: transparent;
+  }
+
+  .project-link:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .project-visual {
+    min-width: 0;
+    margin: 0;
+    padding: 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: 0.25rem;
+    background: #f2f3ef;
+  }
+
+  .project-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 760 / 322;
+    object-fit: contain;
+  }
+
+  .project-visual figcaption {
+    margin: 0.45rem 0.2rem 0.1rem;
+    color: #454c49;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+  }
+
+  .contact-section {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    border: 1px solid var(--line);
+    border-radius: 0.35rem;
+    background:
+      radial-gradient(ellipse at 95% 10%, rgb(121 216 193 / 12%), transparent 21rem),
+      var(--surface-alt);
+  }
+
+  .contact-section h2 {
+    margin-top: 1.2rem;
+  }
+
+  .contact-section > div > p:last-child {
+    max-width: 38rem;
+    margin-top: 1rem;
+    color: var(--muted);
+  }
+
+  .contact-link {
+    flex: 0 0 auto;
+  }
+
+  .site-footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.6rem 2.2rem;
+    color: var(--quiet);
+    font-size: 0.76rem;
+  }
+
+  .footer-brand {
+    color: var(--ink);
+    font-weight: 680;
+    text-decoration: none;
+  }
+
+  .site-footer p {
+    text-align: center;
+  }
+
+  .footer-home {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  @media (max-width: 900px) {
+    .topbar {
+      grid-template-columns: 1fr auto;
+      gap: 0.2rem 1rem;
+      padding-block: 0.65rem;
+    }
+
+    .primary-nav {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      justify-content: flex-start;
+    }
+
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.72fr);
+      gap: 2rem;
+    }
+
+    .focus-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .focus-card + .focus-card {
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    .focus-card h3 {
+      max-width: 24ch;
+      margin-top: 1.6rem;
+    }
+
+    .focus-card > p:not(.card-index) {
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-shell {
+      width: min(calc(100% - 2rem), 1280px);
+    }
+
+    .hero {
+      grid-template-columns: minmax(0, 1fr);
+      padding-top: 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 15vw, 5.8rem);
+    }
+
+    .hero-panel {
+      min-height: 0;
+    }
+
+    .hero-baseline {
+      grid-column: auto;
+      gap: 0.5rem;
+      font-size: 0.59rem;
+    }
+
+    .section-heading {
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-card-featured {
+      grid-column: auto;
+      grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 1.4rem;
+    }
+
+    .site-footer {
+      grid-template-columns: 1fr auto;
+    }
+
+    .site-footer p {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      text-align: left;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .button {
+      transition: none;
+    }
+
+    .button:hover {
+      transform: none;
+    }
+  }
+</style>
