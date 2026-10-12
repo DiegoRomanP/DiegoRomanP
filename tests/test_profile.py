@@ -52,7 +52,7 @@ class PageAudit(HTMLParser):
         self._heading = None
 
     def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
+        attrs = {name: value or "" for name, value in attrs}
         self.tags.append(tag)
         self.attributes.extend(attrs)
         self.url_attributes.extend(
@@ -200,6 +200,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
         html_tag = re.search(r"<html\b([^>]*)>", self.html, re.IGNORECASE)
         self.assertIsNotNone(html_tag)
+        assert html_tag is not None
         self.assertRegex(html_tag.group(1), r'\blang=["\']es["\']')
         self.assertEqual(sum(tag == "h1" for tag, _ in self.page.headings), 1)
         self.assertIn(
@@ -353,8 +354,13 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertNotRegex(astro_config, r"\badapter\s*:")
         self.assertEqual(
             {path.name for path in DIST_PATH.iterdir()},
-            {"index.html", "_astro", "assets"},
+            {"index.html", "_astro", "assets", "landing-preview"},
         )
+        preview_file = DIST_PATH / "landing-preview" / "index.html"
+        self.assertTrue(preview_file.is_file())
+        self.assertIn('data-theme="dark"', preview_file.read_text(encoding="utf-8"))
+        homepage = DIST_PATH / "index.html"
+        self.assertIn("portfolio-home", homepage.read_text(encoding="utf-8"))
 
         built_files = [path for path in DIST_PATH.rglob("*") if path.is_file()]
         self.assertTrue(built_files)
@@ -384,6 +390,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn(":focus-visible", self.css)
         theme_button = re.search(r"\.theme-switcher button\s*\{([^}]+)\}", self.css)
         self.assertIsNotNone(theme_button)
+        assert theme_button is not None
         self.assertRegex(theme_button.group(1), r"min-height:\s*44px")
         self.assertRegex(theme_button.group(1), r"min-width:\s*44px")
         self.assertIn("data-theme=\"dark\"", self.css)

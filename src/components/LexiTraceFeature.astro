@@ -15,7 +15,7 @@ const { project, baseUrl } = Astro.props;
       <span class="project-index">{project.number}</span>
       <span>{project.category}</span>
     </div>
-    <h3><a href={project.url}>{project.name}<span class="title-dash"> — </span>{project.descriptor}</a></h3>
+    <h3><a href={project.url}><span class="project-name">{project.name}</span><span class="project-descriptor">{project.descriptor}</span></a></h3>
     <p class="feature-summary">{project.summary}</p>
     <dl class="project-details">
       <div>

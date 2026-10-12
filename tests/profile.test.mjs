@@ -137,6 +137,12 @@ test("GFM URL checks inspect destinations, not ordinary JavaScript language text
 test("Astro uses one shared profile, static Pages base, system theme and reduced-motion support", async () => {
   const page = await readFile(path.join(ROOT, "src/pages/index.astro"), "utf8");
   const header = await readFile(path.join(ROOT, "src/components/SiteHeader.astro"), "utf8");
+  const portfolioCss = await readFile(path.join(ROOT, "src/styles/portfolio.css"), "utf8");
+  const preview = await readFile(path.join(ROOT, "src/pages/landing-preview.astro"), "utf8");
+  const feature = await readFile(path.join(ROOT, "src/components/LexiTraceFeature.astro"), "utf8");
+  const projectRow = await readFile(path.join(ROOT, "src/components/ProjectRow.astro"), "utf8");
+  const noteCard = await readFile(path.join(ROOT, "src/components/ProjectNoteCard.astro"), "utf8");
+  const statsStrip = await readFile(path.join(ROOT, "src/components/StatsStrip.astro"), "utf8");
   const config = await readFile(path.join(ROOT, "astro.config.mjs"), "utf8");
   const css = await readFile(path.join(ROOT, "src/styles/global.css"), "utf8");
   const script = await readFile(path.join(ROOT, "src/scripts/site.ts"), "utf8");
@@ -144,7 +150,22 @@ test("Astro uses one shared profile, static Pages base, system theme and reduced
   assert.match(page, /import profile from ["']\.\.\/\.\.\/data\/profile\.json["']/);
   assert.match(page, /import stats from ["']\.\.\/\.\.\/data\/github-stats\.json["']/);
   assert.equal((page.match(/<h1\b/g) ?? []).length, 1);
-  assert.match(page, /<html lang="es"/);
+  assert.match(page, /<html lang="es"[^>]*class="portfolio-home"/);
+  assert.match(page, /import ["']\.\.\/styles\/portfolio\.css["']/);
+  assert.match(portfolioCss, /\.portfolio-home h1\s*\{[^}]*font-size:\s*clamp\(2\.25rem, 1\.5rem \+ 2\.5vw, 3\.5rem\)/s);
+  assert.match(portfolioCss, /\.portfolio-home \.hero\s*\{[^}]*justify-items:\s*center/s);
+  assert.match(portfolioCss, /--container:\s*1088px/);
+  assert.match(portfolioCss, /@media \(max-width: 920px\)/);
+  assert.match(portfolioCss, /@media \(max-width: 700px\)/);
+  assert.match(portfolioCss, /@media \(max-width: 380px\)/);
+  assert.doesNotMatch(preview, /portfolio\.css|portfolio-home/);
+  for (const component of [feature, projectRow, noteCard]) {
+    assert.match(component, /class="project-descriptor"/);
+    assert.match(component, /class="project-name"/);
+  }
+  assert.match(header, /data-theme-controls/);
+  assert.match(statsStrip, /aria-label="Conteo textual de repositorios por lenguaje principal"/);
+  assert.match(statsStrip, /sources\.profile/);
   assert.match(config, /output:\s*["']static["']/);
   assert.match(config, /base:\s*["']\/DiegoRomanP\/["']/);
   assert.match(config, /site:\s*["']https:\/\/diegoromanp\.github\.io["']/);
@@ -158,6 +179,9 @@ test("Astro uses one shared profile, static Pages base, system theme and reduced
   assert.match(css, /prefers-color-scheme:\s*dark/);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.match(css, /:focus-visible/);
+  assert.match(portfolioCss, /\.portfolio-home :is\(a, button\):focus-visible/);
+  assert.match(portfolioCss, /\.portfolio-home \.theme-switcher button\s*\{[^}]*min-width:\s*40px;[^}]*min-height:\s*40px;/s);
+  assert.match(portfolioCss, /\.portfolio-home \.theme-switcher button\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;/s);
   assert.match(script, /motion\/mini/);
   assert.match(script, /localStorage/);
   assert.match(script, /REDUCED_MOTION_QUERY/);

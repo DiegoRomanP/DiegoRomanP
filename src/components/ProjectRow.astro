@@ -12,7 +12,7 @@ const { project } = Astro.props;
   <p class="project-index project-row-index">{project.number}<span aria-hidden="true"> / 04</span></p>
   <div class="project-row-main">
     <p class="project-meta-label">{project.category}</p>
-    <h3><a href={project.url}>{project.name}<span class="title-dash"> — </span>{project.descriptor}</a></h3>
+    <h3><a href={project.url}><span class="project-name">{project.name}</span><span class="project-descriptor">{project.descriptor}</span></a></h3>
     <p>{project.summary}</p>
   </div>
   <div class="project-row-notes">

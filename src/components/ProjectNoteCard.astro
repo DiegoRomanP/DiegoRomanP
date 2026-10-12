@@ -14,7 +14,7 @@ const { project, variant } = Astro.props;
     <span class="project-index">{project.number}</span>
     <span>{project.category}</span>
   </div>
-  <h3><a href={project.url}>{project.name}</a></h3>
+  <h3><a href={project.url}><span class="project-name">{project.name}</span><span class="project-descriptor">{project.descriptor}</span></a></h3>
   <p>{project.summary}</p>
   <p class="project-scope"><strong>Alcance</strong>{project.scope}</p>
   <p class="stack-line"><span>Stack</span>{project.stack.join(" · ")}</p>

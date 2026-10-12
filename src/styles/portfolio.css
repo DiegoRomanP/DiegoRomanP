@@ -1,0 +1,398 @@
+/* Minimal, dark-first presentation for the main portfolio page only. */
+.portfolio-home .site-header {
+  background: var(--page);
+}
+
+.portfolio-home .header-inner {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1rem 1.5rem;
+  min-height: 4.5rem;
+}
+
+.portfolio-home .header-inner > .brand {
+  grid-column: 1;
+}
+
+.portfolio-home .header-inner > .primary-nav {
+  grid-column: 2;
+}
+
+.portfolio-home .header-inner > .header-utilities {
+  grid-column: 3;
+}
+
+.portfolio-home .brand-mark {
+  width: 2.25rem;
+  border-radius: 0.3rem;
+  background: transparent;
+}
+
+.portfolio-home .brand-copy strong {
+  font-size: 0.875rem;
+}
+
+.portfolio-home .brand-copy > span {
+  font-size: 0.68rem;
+}
+
+.portfolio-home .header-utilities {
+  display: block;
+}
+
+.portfolio-home .edition-label {
+  display: none;
+}
+
+.portfolio-home .primary-nav a {
+  font-size: 0.8125rem;
+}
+
+.portfolio-home .edition-label {
+  font-size: 0.68rem;
+}
+
+.portfolio-home .theme-switcher {
+  padding: 0.12rem;
+}
+
+.portfolio-home .theme-switcher button {
+  min-width: 40px;
+  min-height: 40px;
+  padding-inline: 0.5rem;
+}
+
+.portfolio-home .container {
+  --container: 1088px;
+}
+
+.portfolio-home h1 {
+  max-width: none;
+  font-size: clamp(2.25rem, 1.5rem + 2.5vw, 3.5rem);
+  font-weight: 680;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.portfolio-home .hero {
+  display: grid;
+  justify-items: center;
+  padding-block: clamp(4.5rem, 9vw, 7rem) clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+}
+
+.portfolio-home .hero-main {
+  display: grid;
+  justify-items: center;
+  max-width: 52rem;
+}
+
+.portfolio-home .hero-eyebrow {
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.portfolio-home .eyebrow-index {
+  color: var(--accent-strong);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.portfolio-home .hero-intro {
+  max-width: 42rem;
+  margin-top: 1rem;
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  line-height: 1.7;
+}
+
+.portfolio-home .hero-actions {
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.portfolio-home .hero-note {
+  width: min(100%, 43rem);
+  margin-top: clamp(2rem, 5vw, 3.25rem);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: var(--surface);
+  text-align: left;
+}
+
+.portfolio-home .hero-note ol {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+}
+
+.portfolio-home .hero-note li {
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.portfolio-home .note-label,
+.portfolio-home .note-foot {
+  font-size: 0.75rem;
+}
+
+.portfolio-home .note-foot {
+  margin-top: 0.85rem;
+}
+
+.portfolio-home .hero-baseline {
+  width: 100%;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.portfolio-home .section-intro {
+  max-width: 48rem;
+  margin-inline: auto;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.portfolio-home .section-intro h2,
+.portfolio-home .closing-note h2 {
+  max-width: 22ch;
+  font-size: clamp(1.875rem, 1.5rem + 1.4vw, 2.5rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.portfolio-home .section-intro > p:last-child {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+.portfolio-home .section-intro .eyebrow,
+.portfolio-home .closing-note > .eyebrow {
+  font-size: 0.75rem;
+}
+
+.portfolio-home .projects-list {
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.portfolio-home .project-feature {
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  padding-block: 1.75rem;
+}
+
+.portfolio-home .feature-copy h3 {
+  margin-top: 0.9rem;
+  font-size: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.portfolio-home .feature-copy h3 a,
+.portfolio-home .project-row h3 a {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.portfolio-home .project-descriptor {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78em;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+
+.portfolio-home .feature-summary,
+.portfolio-home .project-row-main > p:last-child,
+.portfolio-home .project-note > p:not(.project-meta):not(.stack-line):not(.release-link) {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.portfolio-home .project-details {
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.portfolio-home .project-row {
+  grid-template-columns: 3.5rem minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 1.25rem clamp(1.25rem, 3vw, 2.25rem);
+  padding-block: 1.5rem;
+}
+
+.portfolio-home .project-row h3 {
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.portfolio-home .project-row-notes {
+  gap: 0.55rem;
+}
+
+.portfolio-home .project-row-notes p {
+  grid-template-columns: 4.2rem 1fr;
+}
+
+.portfolio-home .project-note-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-home .project-note,
+.portfolio-home .project-note-machine-learning {
+  margin-top: 0;
+  border-top-width: 1px;
+  border-radius: 0.35rem;
+  background: var(--surface);
+}
+
+.portfolio-home .project-note h3 {
+  margin-top: 0.8rem;
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+.portfolio-home .stats-section {
+  padding-inline: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 0.35rem;
+}
+
+.portfolio-home .stats-numbers {
+  align-self: start;
+}
+
+.portfolio-home .stat-item {
+  padding-block: 0.8rem;
+}
+
+.portfolio-home .stat-item dd {
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
+}
+
+.portfolio-home .technology-groups {
+  gap: 0 2rem;
+}
+
+.portfolio-home .technology-group {
+  padding-block: 1rem 1.15rem;
+}
+
+.portfolio-home .formation-layout {
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.portfolio-home .closing-note {
+  justify-items: center;
+  padding-block: clamp(3.5rem, 6vw, 5rem);
+  text-align: center;
+}
+
+.portfolio-home .closing-note h2 {
+  max-width: none;
+}
+
+.portfolio-home .closing-note > p:not(.eyebrow) {
+  font-size: 0.9375rem;
+}
+
+.portfolio-home .site-footer {
+  font-size: 0.8125rem;
+}
+
+.portfolio-home :is(a, button):focus-visible {
+  outline-offset: 3px;
+}
+
+@media (max-width: 920px) {
+  .portfolio-home .header-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.8rem 1.5rem;
+    padding-block: 0.9rem;
+  }
+
+  .portfolio-home .header-inner > .brand,
+  .portfolio-home .header-inner > .header-utilities {
+    grid-row: 1;
+  }
+
+  .portfolio-home .header-inner > .primary-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .portfolio-home .header-inner > .header-utilities {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-home .hero {
+    padding-top: 3.75rem;
+  }
+
+  .portfolio-home .hero-eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-home .hero-note ol {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.55rem;
+  }
+
+  .portfolio-home .project-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.75rem 1rem;
+  }
+
+  .portfolio-home .project-row-notes {
+    grid-column: 2;
+  }
+
+  .portfolio-home .project-note-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-home .header-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portfolio-home .primary-nav,
+  .portfolio-home .header-utilities {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .portfolio-home .header-utilities {
+    justify-items: start;
+  }
+
+  .portfolio-home .theme-switcher button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .portfolio-home .hero-eyebrow {
+    display: flex;
+    justify-items: center;
+  }
+
+  .portfolio-home .hero-actions {
+    align-items: center;
+    flex-direction: row;
+  }
+}
