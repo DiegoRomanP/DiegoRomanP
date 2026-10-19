@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T18:01:04.871Z",
+  "generatedAt": "2026-10-19T15:42:33.525Z",
   "sources": {
     "profile": "https://api.github.com/users/DiegoRomanP",
     "repositories": "https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100"
   },
   "profile": {
     "url": "https://github.com/DiegoRomanP",
-    "followers": 6
+    "followers": 7
   },
   "repositories": [
     {
@@ -152,7 +152,7 @@
   "metrics": {
     "publicOwnedRepositories": 23,
     "stars": 1,
-    "followers": 6,
+    "followers": 7,
     "languages": [
       {
         "name": "Jupyter Notebook",
