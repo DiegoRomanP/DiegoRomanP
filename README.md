@@ -47,7 +47,7 @@ Experimento de predicción crediticia con XGBoost que compara métodos de balanc
 
 ## GitHub en cifras
 
-Actualizado: **2026-10-26 15:16 UTC**. Datos públicos del [perfil de GitHub](https://api.github.com/users/DiegoRomanP) y de sus [repositorios](https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100).
+Actualizado: **2026-11-02 18:30 UTC**. Datos públicos del [perfil de GitHub](https://api.github.com/users/DiegoRomanP) y de sus [repositorios](https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100).
 
 | Métrica pública | Valor |
 |:--|--:|
