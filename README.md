@@ -47,17 +47,17 @@ Experimento de predicción crediticia con XGBoost que compara métodos de balanc
 
 ## GitHub en cifras
 
-Actualizado: **2026-11-02 18:30 UTC**. Datos públicos del [perfil de GitHub](https://api.github.com/users/DiegoRomanP) y de sus [repositorios](https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100).
+Actualizado: **2026-11-09 18:54 UTC**. Datos públicos del [perfil de GitHub](https://api.github.com/users/DiegoRomanP) y de sus [repositorios](https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100).
 
 | Métrica pública | Valor |
 |:--|--:|
-| Repositorios propios públicos (sin forks) | 23 |
+| Repositorios propios públicos (sin forks) | 24 |
 | Estrellas en esos repositorios | 1 |
 | Seguidores de la cuenta | 7 |
 
 El lenguaje principal declarado se cuenta una vez por repositorio; los que no informan lenguaje quedan fuera del denominador. No representa bytes de código ni nivel de dominio.
 
-**Conteos por repositorio:** Jupyter Notebook: 8 · Python: 7 · TypeScript: 3 · Shell: 2 · Java: 1 · JavaScript: 1.
+**Conteos por repositorio:** Jupyter Notebook: 8 · Python: 7 · TypeScript: 3 · Shell: 2 · HTML: 1 · Java: 1 · JavaScript: 1.
 
 ![Conteo de lenguajes principales por repositorio público propio](public/assets/github-languages.svg)
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T18:30:24.015Z",
+  "generatedAt": "2026-11-09T18:54:32.504Z",
   "sources": {
     "profile": "https://api.github.com/users/DiegoRomanP",
     "repositories": "https://api.github.com/users/DiegoRomanP/repos?type=owner&per_page=100"
@@ -89,6 +89,12 @@
       "language": "Jupyter Notebook"
     },
     {
+      "name": "Modelo-De-Difusi-n-Proyecto",
+      "url": "https://github.com/DiegoRomanP/Modelo-De-Difusi-n-Proyecto",
+      "stars": 0,
+      "language": "HTML"
+    },
+    {
       "name": "Predicci-n-de-cancelaciones-en-alojamientos-tur-sticos",
       "url": "https://github.com/DiegoRomanP/Predicci-n-de-cancelaciones-en-alojamientos-tur-sticos",
       "stars": 0,
@@ -150,7 +156,7 @@
     }
   ],
   "metrics": {
-    "publicOwnedRepositories": 23,
+    "publicOwnedRepositories": 24,
     "stars": 1,
     "followers": 7,
     "languages": [
@@ -169,6 +175,10 @@
       {
         "name": "Shell",
         "count": 2
+      },
+      {
+        "name": "HTML",
+        "count": 1
       },
       {
         "name": "Java",

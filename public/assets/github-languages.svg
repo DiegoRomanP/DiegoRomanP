@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="270" viewBox="0 0 320 270" role="img" aria-labelledby="title description">
   <title id="title">Lenguaje principal declarado por repositorio</title>
-  <desc id="description">Distribución entre 22 repositorios con lenguaje principal informado; cada repositorio cuenta una vez.</desc>
+  <desc id="description">Distribución entre 23 repositorios con lenguaje principal informado; cada repositorio cuenta una vez.</desc>
   <rect width="320" height="270" rx="14" fill="#faf9f6" />
   <text x="16" y="27" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Lenguajes principales</text>
   <text x="16" y="50" fill="#62625b" font-family="system-ui, sans-serif" font-size="14">1 repositorio = 1 dato · sin bytes ni nivel</text>
@@ -21,8 +21,8 @@
   <rect x="16" y="197" width="200" height="5" rx="2.5" fill="#e3e1da" />
   <rect x="16" y="197" width="50.00" height="5" rx="2.5" fill="#14746d" />
   <text x="16" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18">Otros lenguajes</text>
-  <text x="304" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">2</text>
+  <text x="304" y="224" fill="#151515" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">3</text>
   <rect x="16" y="231" width="200" height="5" rx="2.5" fill="#e3e1da" />
-  <rect x="16" y="231" width="50.00" height="5" rx="2.5" fill="#14746d" />
-  <text x="16" y="258" fill="#62625b" font-family="system-ui, sans-serif" font-size="13">n = 22 · excluye repos sin lenguaje informado</text>
+  <rect x="16" y="231" width="75.00" height="5" rx="2.5" fill="#14746d" />
+  <text x="16" y="258" fill="#62625b" font-family="system-ui, sans-serif" font-size="13">n = 23 · excluye repos sin lenguaje informado</text>
 </svg>
